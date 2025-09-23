@@ -777,11 +777,6 @@ def json_to_df(path: str) -> pd.DataFrame:
     df = df.sort_values("date").reset_index(drop=True)
     return df
 
-
-JSON_PATH = "BESS OMIE Results.json"
-
-
-
 # --- First day bootstrap: backfill a range and create the JSON ---
 # (Pick your own dates)
 #backfill_df = download_range_es_wide("20250101", "20250920", ida_sessions=(1,2,3))
