@@ -1,0 +1,46 @@
+name: Daily OMIE scrape & JSON update
+
+on:
+  schedule:
+    # Runs every day at 04:10 UTC (~06:10 Madrid)
+    - cron: "15 20 * * *"
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+permissions:
+  contents: write         # needed to push the updated JSON
+
+concurrency:
+  group: daily-omie-scrape
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper/optimizer
+        run: python omie_scrapper.py
+
+      - name: Commit JSON if changed
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "BESS OMIE Results.json"
+            git commit -m "Update BESS OMIE Results.json [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
