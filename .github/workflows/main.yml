@@ -3,7 +3,7 @@ name: Daily OMIE scrape & JSON update
 on:
   schedule:
     # Runs every day at  UTC (~06:10 Madrid)
-    - cron: "15 20 * * *"
+    - cron: "59 21 * * *"
   workflow_dispatch: {}   # allow manual runs from the Actions tab
 
 permissions:
