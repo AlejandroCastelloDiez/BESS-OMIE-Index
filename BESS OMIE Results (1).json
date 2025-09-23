@@ -1,0 +1,2114 @@
+[
+  {
+    "date": "2025-01-01",
+    "DA_Earnings": 227.71,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 53.45,
+    "IDA3_Delta": 4.9,
+    "IDC_Delta": 10.92
+  },
+  {
+    "date": "2025-01-02",
+    "DA_Earnings": 70.42,
+    "IDA1_Delta": 0.42,
+    "IDA2_Delta": 3.28,
+    "IDA3_Delta": 2.06,
+    "IDC_Delta": 8.59
+  },
+  {
+    "date": "2025-01-03",
+    "DA_Earnings": 72.37,
+    "IDA1_Delta": 4.44,
+    "IDA2_Delta": 2.46,
+    "IDA3_Delta": 0.21,
+    "IDC_Delta": 22.9
+  },
+  {
+    "date": "2025-01-04",
+    "DA_Earnings": 77.23,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 23.14,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 3.39
+  },
+  {
+    "date": "2025-01-05",
+    "DA_Earnings": 55.65,
+    "IDA1_Delta": 10.7,
+    "IDA2_Delta": 9.23,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 4.27
+  },
+  {
+    "date": "2025-01-06",
+    "DA_Earnings": 182.94,
+    "IDA1_Delta": 0.19,
+    "IDA2_Delta": 1.92,
+    "IDA3_Delta": 1.36,
+    "IDC_Delta": 3.86
+  },
+  {
+    "date": "2025-01-07",
+    "DA_Earnings": 153.86,
+    "IDA1_Delta": 0.95,
+    "IDA2_Delta": 9.9,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 0.57
+  },
+  {
+    "date": "2025-01-08",
+    "DA_Earnings": 113.59,
+    "IDA1_Delta": 0.1,
+    "IDA2_Delta": 7.15,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.35
+  },
+  {
+    "date": "2025-01-09",
+    "DA_Earnings": 178.91,
+    "IDA1_Delta": 3.8,
+    "IDA2_Delta": 2.92,
+    "IDA3_Delta": 0.31,
+    "IDC_Delta": 4.65
+  },
+  {
+    "date": "2025-01-10",
+    "DA_Earnings": 102.11,
+    "IDA1_Delta": 0.65,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 3.05,
+    "IDC_Delta": 7.69
+  },
+  {
+    "date": "2025-01-11",
+    "DA_Earnings": 81.92,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 2.17
+  },
+  {
+    "date": "2025-01-12",
+    "DA_Earnings": 207.26,
+    "IDA1_Delta": 1.0,
+    "IDA2_Delta": 13.51,
+    "IDA3_Delta": 1.77,
+    "IDC_Delta": 6.54
+  },
+  {
+    "date": "2025-01-13",
+    "DA_Earnings": 87.26,
+    "IDA1_Delta": 14.16,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 9.71,
+    "IDC_Delta": 0.76
+  },
+  {
+    "date": "2025-01-14",
+    "DA_Earnings": 97.34,
+    "IDA1_Delta": 0.71,
+    "IDA2_Delta": 13.41,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 2.43
+  },
+  {
+    "date": "2025-01-15",
+    "DA_Earnings": 109.66,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 6.28,
+    "IDA3_Delta": 10.1,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-01-16",
+    "DA_Earnings": 109.45,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 6.72,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 15.63
+  },
+  {
+    "date": "2025-01-17",
+    "DA_Earnings": 94.99,
+    "IDA1_Delta": 0.37,
+    "IDA2_Delta": 5.38,
+    "IDA3_Delta": 7.09,
+    "IDC_Delta": 1.99
+  },
+  {
+    "date": "2025-01-18",
+    "DA_Earnings": 60.94,
+    "IDA1_Delta": 0.61,
+    "IDA2_Delta": 0.93,
+    "IDA3_Delta": 1.48,
+    "IDC_Delta": 4.37
+  },
+  {
+    "date": "2025-01-19",
+    "DA_Earnings": 64.11,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 10.6,
+    "IDC_Delta": 4.62
+  },
+  {
+    "date": "2025-01-20",
+    "DA_Earnings": 47.57,
+    "IDA1_Delta": 2.79,
+    "IDA2_Delta": 49.31,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 45.45
+  },
+  {
+    "date": "2025-01-21",
+    "DA_Earnings": 43.24,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 6.45,
+    "IDA3_Delta": 3.04,
+    "IDC_Delta": 23.21
+  },
+  {
+    "date": "2025-01-22",
+    "DA_Earnings": 66.09,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 5.62,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 17.71
+  },
+  {
+    "date": "2025-01-23",
+    "DA_Earnings": 94.62,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 0.32,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 39.68
+  },
+  {
+    "date": "2025-01-24",
+    "DA_Earnings": 46.82,
+    "IDA1_Delta": 5.03,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-01-25",
+    "DA_Earnings": 144.72,
+    "IDA1_Delta": 5.0,
+    "IDA2_Delta": 15.2,
+    "IDA3_Delta": 19.64,
+    "IDC_Delta": 28.31
+  },
+  {
+    "date": "2025-01-26",
+    "DA_Earnings": 57.29,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 0.27,
+    "IDA3_Delta": 23.46,
+    "IDC_Delta": -0.0
+  },
+  {
+    "date": "2025-01-27",
+    "DA_Earnings": 82.0,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 1.44,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 4.25
+  },
+  {
+    "date": "2025-01-28",
+    "DA_Earnings": 108.77,
+    "IDA1_Delta": 0.62,
+    "IDA2_Delta": 0.35,
+    "IDA3_Delta": 0.55,
+    "IDC_Delta": 30.35
+  },
+  {
+    "date": "2025-01-29",
+    "DA_Earnings": 207.84,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 5.9,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": -0.0
+  },
+  {
+    "date": "2025-01-30",
+    "DA_Earnings": 188.72,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 1.35
+  },
+  {
+    "date": "2025-01-31",
+    "DA_Earnings": 225.83,
+    "IDA1_Delta": 0.48,
+    "IDA2_Delta": 5.04,
+    "IDA3_Delta": 2.36,
+    "IDC_Delta": 25.11
+  },
+  {
+    "date": "2025-02-01",
+    "DA_Earnings": 261.38,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-02-02",
+    "DA_Earnings": 100.65,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 19.89
+  },
+  {
+    "date": "2025-02-03",
+    "DA_Earnings": 159.74,
+    "IDA1_Delta": 0.92,
+    "IDA2_Delta": 32.34,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 38.64
+  },
+  {
+    "date": "2025-02-04",
+    "DA_Earnings": 187.01,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 0.23,
+    "IDC_Delta": 14.84
+  },
+  {
+    "date": "2025-02-05",
+    "DA_Earnings": 262.3,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 9.45,
+    "IDA3_Delta": 6.03,
+    "IDC_Delta": 7.0
+  },
+  {
+    "date": "2025-02-06",
+    "DA_Earnings": 187.09,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 1.12,
+    "IDA3_Delta": 2.7,
+    "IDC_Delta": 16.95
+  },
+  {
+    "date": "2025-02-07",
+    "DA_Earnings": 75.06,
+    "IDA1_Delta": 2.55,
+    "IDA2_Delta": 0.3,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 10.7
+  },
+  {
+    "date": "2025-02-08",
+    "DA_Earnings": 186.26,
+    "IDA1_Delta": 1.62,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-02-09",
+    "DA_Earnings": 173.71,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 1.19,
+    "IDA3_Delta": 1.22,
+    "IDC_Delta": 9.05
+  },
+  {
+    "date": "2025-02-10",
+    "DA_Earnings": 99.19,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 2.09,
+    "IDA3_Delta": 0.05,
+    "IDC_Delta": 3.18
+  },
+  {
+    "date": "2025-02-11",
+    "DA_Earnings": 113.44,
+    "IDA1_Delta": 2.51,
+    "IDA2_Delta": 3.4,
+    "IDA3_Delta": 4.93,
+    "IDC_Delta": 3.91
+  },
+  {
+    "date": "2025-02-12",
+    "DA_Earnings": 190.43,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": -0.0
+  },
+  {
+    "date": "2025-02-13",
+    "DA_Earnings": 173.54,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 12.67,
+    "IDC_Delta": 10.87
+  },
+  {
+    "date": "2025-02-14",
+    "DA_Earnings": 217.43,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": -0.0
+  },
+  {
+    "date": "2025-02-15",
+    "DA_Earnings": 165.11,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 0.39,
+    "IDA3_Delta": 3.61,
+    "IDC_Delta": 6.22
+  },
+  {
+    "date": "2025-02-16",
+    "DA_Earnings": 237.03,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 24.16
+  },
+  {
+    "date": "2025-02-17",
+    "DA_Earnings": 154.22,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 3.36,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-02-18",
+    "DA_Earnings": 241.62,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 3.62
+  },
+  {
+    "date": "2025-02-19",
+    "DA_Earnings": 148.68,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 0.59
+  },
+  {
+    "date": "2025-02-20",
+    "DA_Earnings": 199.62,
+    "IDA1_Delta": 1.4,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-02-21",
+    "DA_Earnings": 144.94,
+    "IDA1_Delta": 3.1,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 2.98,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-02-22",
+    "DA_Earnings": 135.99,
+    "IDA1_Delta": 3.84,
+    "IDA2_Delta": 14.35,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 22.27
+  },
+  {
+    "date": "2025-02-23",
+    "DA_Earnings": 209.81,
+    "IDA1_Delta": 7.21,
+    "IDA2_Delta": 0.18,
+    "IDA3_Delta": 1.08,
+    "IDC_Delta": 8.52
+  },
+  {
+    "date": "2025-02-24",
+    "DA_Earnings": 183.33,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 7.64,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 7.97
+  },
+  {
+    "date": "2025-02-25",
+    "DA_Earnings": 119.57,
+    "IDA1_Delta": 5.83,
+    "IDA2_Delta": 5.4,
+    "IDA3_Delta": 2.6,
+    "IDC_Delta": 24.23
+  },
+  {
+    "date": "2025-02-26",
+    "DA_Earnings": 232.53,
+    "IDA1_Delta": 1.3,
+    "IDA2_Delta": 8.17,
+    "IDA3_Delta": 0.22,
+    "IDC_Delta": 13.45
+  },
+  {
+    "date": "2025-02-27",
+    "DA_Earnings": 150.67,
+    "IDA1_Delta": 0.73,
+    "IDA2_Delta": 7.5,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 2.98
+  },
+  {
+    "date": "2025-02-28",
+    "DA_Earnings": 77.97,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.82,
+    "IDC_Delta": 2.44
+  },
+  {
+    "date": "2025-03-01",
+    "DA_Earnings": 71.94,
+    "IDA1_Delta": 1.14,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 4.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-03-02",
+    "DA_Earnings": 142.08,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 1.36,
+    "IDC_Delta": -0.0
+  },
+  {
+    "date": "2025-03-03",
+    "DA_Earnings": 105.99,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 17.97,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-03-04",
+    "DA_Earnings": 129.5,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-03-05",
+    "DA_Earnings": 120.02,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 30.89,
+    "IDC_Delta": 42.24
+  },
+  {
+    "date": "2025-03-06",
+    "DA_Earnings": 97.42,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 4.27,
+    "IDA3_Delta": 5.5,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-03-07",
+    "DA_Earnings": 64.37,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 13.88,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 11.87
+  },
+  {
+    "date": "2025-03-08",
+    "DA_Earnings": 71.83,
+    "IDA1_Delta": 3.19,
+    "IDA2_Delta": 14.46,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 17.24
+  },
+  {
+    "date": "2025-03-09",
+    "DA_Earnings": 203.67,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 0.88,
+    "IDC_Delta": 1.72
+  },
+  {
+    "date": "2025-03-10",
+    "DA_Earnings": 105.29,
+    "IDA1_Delta": 4.44,
+    "IDA2_Delta": 0.98,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 6.4
+  },
+  {
+    "date": "2025-03-11",
+    "DA_Earnings": 112.84,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 2.92,
+    "IDA3_Delta": 2.5,
+    "IDC_Delta": 44.71
+  },
+  {
+    "date": "2025-03-12",
+    "DA_Earnings": 135.49,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 10.01,
+    "IDA3_Delta": 6.0,
+    "IDC_Delta": 24.15
+  },
+  {
+    "date": "2025-03-13",
+    "DA_Earnings": 86.5,
+    "IDA1_Delta": 0.01,
+    "IDA2_Delta": 15.83,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 30.47
+  },
+  {
+    "date": "2025-03-14",
+    "DA_Earnings": 214.07,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 56.88,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 34.0
+  },
+  {
+    "date": "2025-03-15",
+    "DA_Earnings": 216.26,
+    "IDA1_Delta": 0.1,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 1.64
+  },
+  {
+    "date": "2025-03-16",
+    "DA_Earnings": 212.94,
+    "IDA1_Delta": 2.48,
+    "IDA2_Delta": 19.2,
+    "IDA3_Delta": 0.22,
+    "IDC_Delta": 17.88
+  },
+  {
+    "date": "2025-03-17",
+    "DA_Earnings": 164.29,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 13.86,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 15.52
+  },
+  {
+    "date": "2025-03-18",
+    "DA_Earnings": 233.38,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-03-19",
+    "DA_Earnings": 109.79,
+    "IDA1_Delta": 0.97,
+    "IDA2_Delta": 48.69,
+    "IDA3_Delta": 2.76,
+    "IDC_Delta": 41.89
+  },
+  {
+    "date": "2025-03-20",
+    "DA_Earnings": 164.96,
+    "IDA1_Delta": 8.72,
+    "IDA2_Delta": 0.5,
+    "IDA3_Delta": 0.14,
+    "IDC_Delta": 16.34
+  },
+  {
+    "date": "2025-03-21",
+    "DA_Earnings": 63.4,
+    "IDA1_Delta": 6.23,
+    "IDA2_Delta": 3.1,
+    "IDA3_Delta": 2.04,
+    "IDC_Delta": 52.67
+  },
+  {
+    "date": "2025-03-22",
+    "DA_Earnings": 108.86,
+    "IDA1_Delta": 2.52,
+    "IDA2_Delta": 7.94,
+    "IDA3_Delta": 8.2,
+    "IDC_Delta": 35.83
+  },
+  {
+    "date": "2025-03-23",
+    "DA_Earnings": 201.36,
+    "IDA1_Delta": 3.7,
+    "IDA2_Delta": 1.05,
+    "IDA3_Delta": 2.57,
+    "IDC_Delta": 9.45
+  },
+  {
+    "date": "2025-03-24",
+    "DA_Earnings": 285.49,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 1.42,
+    "IDC_Delta": 22.53
+  },
+  {
+    "date": "2025-03-25",
+    "DA_Earnings": 271.74,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 0.18,
+    "IDA3_Delta": 1.52,
+    "IDC_Delta": 15.95
+  },
+  {
+    "date": "2025-03-26",
+    "DA_Earnings": 215.05,
+    "IDA1_Delta": 3.3,
+    "IDA2_Delta": 4.39,
+    "IDA3_Delta": 0.98,
+    "IDC_Delta": 22.93
+  },
+  {
+    "date": "2025-03-27",
+    "DA_Earnings": 242.75,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 5.88,
+    "IDA3_Delta": 1.25,
+    "IDC_Delta": 29.37
+  },
+  {
+    "date": "2025-03-28",
+    "DA_Earnings": 129.04,
+    "IDA1_Delta": 3.13,
+    "IDA2_Delta": 8.07,
+    "IDA3_Delta": 5.83,
+    "IDC_Delta": 6.54
+  },
+  {
+    "date": "2025-03-29",
+    "DA_Earnings": 37.33,
+    "IDA1_Delta": 2.99,
+    "IDA2_Delta": 6.44,
+    "IDA3_Delta": 6.51,
+    "IDC_Delta": 7.99
+  },
+  {
+    "date": "2025-03-30",
+    "DA_Earnings": 61.75,
+    "IDA1_Delta": 1.43,
+    "IDA2_Delta": 21.03,
+    "IDA3_Delta": 11.86,
+    "IDC_Delta": 23.93
+  },
+  {
+    "date": "2025-03-31",
+    "DA_Earnings": 294.42,
+    "IDA1_Delta": 1.48,
+    "IDA2_Delta": 1.42,
+    "IDA3_Delta": 21.05,
+    "IDC_Delta": 36.07
+  },
+  {
+    "date": "2025-04-01",
+    "DA_Earnings": 200.59,
+    "IDA1_Delta": 2.09,
+    "IDA2_Delta": 9.81,
+    "IDA3_Delta": 7.85,
+    "IDC_Delta": 15.12
+  },
+  {
+    "date": "2025-04-02",
+    "DA_Earnings": 125.73,
+    "IDA1_Delta": 5.4,
+    "IDA2_Delta": 2.15,
+    "IDA3_Delta": 5.82,
+    "IDC_Delta": 30.73
+  },
+  {
+    "date": "2025-04-03",
+    "DA_Earnings": 135.15,
+    "IDA1_Delta": 1.15,
+    "IDA2_Delta": 15.13,
+    "IDA3_Delta": 13.66,
+    "IDC_Delta": 46.93
+  },
+  {
+    "date": "2025-04-04",
+    "DA_Earnings": 72.31,
+    "IDA1_Delta": 21.46,
+    "IDA2_Delta": 11.89,
+    "IDA3_Delta": 1.45,
+    "IDC_Delta": 48.76
+  },
+  {
+    "date": "2025-04-05",
+    "DA_Earnings": 164.75,
+    "IDA1_Delta": 1.97,
+    "IDA2_Delta": 1.9,
+    "IDA3_Delta": 0.91,
+    "IDC_Delta": 15.46
+  },
+  {
+    "date": "2025-04-06",
+    "DA_Earnings": 134.83,
+    "IDA1_Delta": 8.62,
+    "IDA2_Delta": 1.12,
+    "IDA3_Delta": 1.91,
+    "IDC_Delta": 35.88
+  },
+  {
+    "date": "2025-04-07",
+    "DA_Earnings": 277.11,
+    "IDA1_Delta": 0.71,
+    "IDA2_Delta": 2.5,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 28.92
+  },
+  {
+    "date": "2025-04-08",
+    "DA_Earnings": 206.96,
+    "IDA1_Delta": 1.53,
+    "IDA2_Delta": 0.8,
+    "IDA3_Delta": 0.01,
+    "IDC_Delta": 7.73
+  },
+  {
+    "date": "2025-04-09",
+    "DA_Earnings": 135.85,
+    "IDA1_Delta": 1.21,
+    "IDA2_Delta": 16.55,
+    "IDA3_Delta": 2.29,
+    "IDC_Delta": 20.37
+  },
+  {
+    "date": "2025-04-10",
+    "DA_Earnings": 80.02,
+    "IDA1_Delta": 15.35,
+    "IDA2_Delta": 0.82,
+    "IDA3_Delta": 0.65,
+    "IDC_Delta": 23.75
+  },
+  {
+    "date": "2025-04-11",
+    "DA_Earnings": 93.54,
+    "IDA1_Delta": 0.46,
+    "IDA2_Delta": 16.97,
+    "IDA3_Delta": 1.24,
+    "IDC_Delta": 22.16
+  },
+  {
+    "date": "2025-04-12",
+    "DA_Earnings": 114.25,
+    "IDA1_Delta": 5.41,
+    "IDA2_Delta": 5.07,
+    "IDA3_Delta": 1.31,
+    "IDC_Delta": 19.16
+  },
+  {
+    "date": "2025-04-13",
+    "DA_Earnings": 103.36,
+    "IDA1_Delta": 5.82,
+    "IDA2_Delta": 3.98,
+    "IDA3_Delta": 8.15,
+    "IDC_Delta": 22.07
+  },
+  {
+    "date": "2025-04-14",
+    "DA_Earnings": 63.44,
+    "IDA1_Delta": 15.39,
+    "IDA2_Delta": 24.67,
+    "IDA3_Delta": 5.32,
+    "IDC_Delta": 46.17
+  },
+  {
+    "date": "2025-04-15",
+    "DA_Earnings": 58.22,
+    "IDA1_Delta": 2.06,
+    "IDA2_Delta": 2.84,
+    "IDA3_Delta": 2.92,
+    "IDC_Delta": 13.09
+  },
+  {
+    "date": "2025-04-16",
+    "DA_Earnings": 89.45,
+    "IDA1_Delta": 2.52,
+    "IDA2_Delta": 11.29,
+    "IDA3_Delta": 4.03,
+    "IDC_Delta": 31.25
+  },
+  {
+    "date": "2025-04-17",
+    "DA_Earnings": 165.8,
+    "IDA1_Delta": 2.76,
+    "IDA2_Delta": 1.16,
+    "IDA3_Delta": 1.41,
+    "IDC_Delta": 28.9
+  },
+  {
+    "date": "2025-04-18",
+    "DA_Earnings": 58.33,
+    "IDA1_Delta": 11.48,
+    "IDA2_Delta": 18.9,
+    "IDA3_Delta": 2.83,
+    "IDC_Delta": 39.26
+  },
+  {
+    "date": "2025-04-19",
+    "DA_Earnings": 21.6,
+    "IDA1_Delta": 3.9,
+    "IDA2_Delta": 4.98,
+    "IDA3_Delta": 0.47,
+    "IDC_Delta": 13.11
+  },
+  {
+    "date": "2025-04-20",
+    "DA_Earnings": 147.57,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 4.93,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 5.04
+  },
+  {
+    "date": "2025-04-21",
+    "DA_Earnings": 235.3,
+    "IDA1_Delta": 4.14,
+    "IDA2_Delta": 0.99,
+    "IDA3_Delta": 27.48,
+    "IDC_Delta": 14.56
+  },
+  {
+    "date": "2025-04-22",
+    "DA_Earnings": 190.39,
+    "IDA1_Delta": 1.33,
+    "IDA2_Delta": 6.59,
+    "IDA3_Delta": 1.86,
+    "IDC_Delta": 13.69
+  },
+  {
+    "date": "2025-04-23",
+    "DA_Earnings": 188.94,
+    "IDA1_Delta": 2.94,
+    "IDA2_Delta": 3.03,
+    "IDA3_Delta": 2.99,
+    "IDC_Delta": 15.05
+  },
+  {
+    "date": "2025-04-24",
+    "DA_Earnings": 187.88,
+    "IDA1_Delta": 6.23,
+    "IDA2_Delta": 5.54,
+    "IDA3_Delta": 2.96,
+    "IDC_Delta": 5.36
+  },
+  {
+    "date": "2025-04-25",
+    "DA_Earnings": 161.09,
+    "IDA1_Delta": 4.75,
+    "IDA2_Delta": 0.48,
+    "IDA3_Delta": 1.99,
+    "IDC_Delta": 13.8
+  },
+  {
+    "date": "2025-04-26",
+    "DA_Earnings": 41.3,
+    "IDA1_Delta": 1.73,
+    "IDA2_Delta": 1.42,
+    "IDA3_Delta": 0.14,
+    "IDC_Delta": 8.11
+  },
+  {
+    "date": "2025-04-27",
+    "DA_Earnings": 169.77,
+    "IDA1_Delta": 2.39,
+    "IDA2_Delta": 5.28,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 64.49
+  },
+  {
+    "date": "2025-04-28",
+    "DA_Earnings": 126.16,
+    "IDA1_Delta": 11.92,
+    "IDA2_Delta": 6.75,
+    "IDA3_Delta": 4.61,
+    "IDC_Delta": 30.25
+  },
+  {
+    "date": "2025-04-29",
+    "DA_Earnings": 61.95,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.0
+  },
+  {
+    "date": "2025-04-30",
+    "DA_Earnings": 178.25,
+    "IDA1_Delta": 14.53,
+    "IDA2_Delta": 70.2,
+    "IDA3_Delta": 19.51,
+    "IDC_Delta": 25.95
+  },
+  {
+    "date": "2025-05-01",
+    "DA_Earnings": 94.74,
+    "IDA1_Delta": 5.52,
+    "IDA2_Delta": 2.26,
+    "IDA3_Delta": 0.25,
+    "IDC_Delta": 14.28
+  },
+  {
+    "date": "2025-05-02",
+    "DA_Earnings": 109.23,
+    "IDA1_Delta": 2.95,
+    "IDA2_Delta": 3.82,
+    "IDA3_Delta": 0.44,
+    "IDC_Delta": 17.01
+  },
+  {
+    "date": "2025-05-03",
+    "DA_Earnings": 114.41,
+    "IDA1_Delta": 5.72,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 2.48,
+    "IDC_Delta": 10.59
+  },
+  {
+    "date": "2025-05-04",
+    "DA_Earnings": 69.5,
+    "IDA1_Delta": 9.94,
+    "IDA2_Delta": 5.7,
+    "IDA3_Delta": 4.37,
+    "IDC_Delta": 8.73
+  },
+  {
+    "date": "2025-05-05",
+    "DA_Earnings": 48.14,
+    "IDA1_Delta": 14.68,
+    "IDA2_Delta": 6.59,
+    "IDA3_Delta": 0.11,
+    "IDC_Delta": 22.09
+  },
+  {
+    "date": "2025-05-06",
+    "DA_Earnings": 104.56,
+    "IDA1_Delta": 12.99,
+    "IDA2_Delta": 3.8,
+    "IDA3_Delta": 18.55,
+    "IDC_Delta": 16.84
+  },
+  {
+    "date": "2025-05-07",
+    "DA_Earnings": 117.55,
+    "IDA1_Delta": 6.23,
+    "IDA2_Delta": 5.93,
+    "IDA3_Delta": 3.41,
+    "IDC_Delta": 36.65
+  },
+  {
+    "date": "2025-05-08",
+    "DA_Earnings": 110.18,
+    "IDA1_Delta": 9.02,
+    "IDA2_Delta": 7.56,
+    "IDA3_Delta": 1.37,
+    "IDC_Delta": 19.58
+  },
+  {
+    "date": "2025-05-09",
+    "DA_Earnings": 117.24,
+    "IDA1_Delta": 12.13,
+    "IDA2_Delta": 2.44,
+    "IDA3_Delta": 4.43,
+    "IDC_Delta": 49.26
+  },
+  {
+    "date": "2025-05-10",
+    "DA_Earnings": 75.59,
+    "IDA1_Delta": 7.98,
+    "IDA2_Delta": 12.87,
+    "IDA3_Delta": 2.97,
+    "IDC_Delta": 24.28
+  },
+  {
+    "date": "2025-05-11",
+    "DA_Earnings": 88.52,
+    "IDA1_Delta": 12.53,
+    "IDA2_Delta": 7.15,
+    "IDA3_Delta": 25.06,
+    "IDC_Delta": 27.06
+  },
+  {
+    "date": "2025-05-12",
+    "DA_Earnings": 200.12,
+    "IDA1_Delta": 4.79,
+    "IDA2_Delta": 6.15,
+    "IDA3_Delta": 0.75,
+    "IDC_Delta": 22.57
+  },
+  {
+    "date": "2025-05-13",
+    "DA_Earnings": 208.9,
+    "IDA1_Delta": 7.19,
+    "IDA2_Delta": 3.9,
+    "IDA3_Delta": 3.87,
+    "IDC_Delta": 7.9
+  },
+  {
+    "date": "2025-05-14",
+    "DA_Earnings": 113.71,
+    "IDA1_Delta": 16.5,
+    "IDA2_Delta": 18.41,
+    "IDA3_Delta": 7.69,
+    "IDC_Delta": 35.92
+  },
+  {
+    "date": "2025-05-15",
+    "DA_Earnings": 65.8,
+    "IDA1_Delta": 21.5,
+    "IDA2_Delta": 22.78,
+    "IDA3_Delta": 4.37,
+    "IDC_Delta": 39.75
+  },
+  {
+    "date": "2025-05-16",
+    "DA_Earnings": 84.86,
+    "IDA1_Delta": 7.33,
+    "IDA2_Delta": 6.23,
+    "IDA3_Delta": 5.18,
+    "IDC_Delta": 14.99
+  },
+  {
+    "date": "2025-05-17",
+    "DA_Earnings": 114.45,
+    "IDA1_Delta": 10.51,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 2.75,
+    "IDC_Delta": 26.3
+  },
+  {
+    "date": "2025-05-18",
+    "DA_Earnings": 95.09,
+    "IDA1_Delta": 1.36,
+    "IDA2_Delta": 2.52,
+    "IDA3_Delta": 4.15,
+    "IDC_Delta": 11.03
+  },
+  {
+    "date": "2025-05-19",
+    "DA_Earnings": 68.39,
+    "IDA1_Delta": 14.26,
+    "IDA2_Delta": 5.15,
+    "IDA3_Delta": 1.1,
+    "IDC_Delta": 60.66
+  },
+  {
+    "date": "2025-05-20",
+    "DA_Earnings": 98.87,
+    "IDA1_Delta": 9.72,
+    "IDA2_Delta": 3.84,
+    "IDA3_Delta": 56.99,
+    "IDC_Delta": 40.68
+  },
+  {
+    "date": "2025-05-21",
+    "DA_Earnings": 95.82,
+    "IDA1_Delta": 9.95,
+    "IDA2_Delta": 9.45,
+    "IDA3_Delta": 4.94,
+    "IDC_Delta": 22.18
+  },
+  {
+    "date": "2025-05-22",
+    "DA_Earnings": 41.65,
+    "IDA1_Delta": 10.51,
+    "IDA2_Delta": 14.28,
+    "IDA3_Delta": 4.71,
+    "IDC_Delta": 27.42
+  },
+  {
+    "date": "2025-05-23",
+    "DA_Earnings": 47.6,
+    "IDA1_Delta": 10.91,
+    "IDA2_Delta": 3.3,
+    "IDA3_Delta": 6.22,
+    "IDC_Delta": 14.91
+  },
+  {
+    "date": "2025-05-24",
+    "DA_Earnings": 93.36,
+    "IDA1_Delta": 5.79,
+    "IDA2_Delta": 0.15,
+    "IDA3_Delta": 2.51,
+    "IDC_Delta": 19.59
+  },
+  {
+    "date": "2025-05-25",
+    "DA_Earnings": 82.46,
+    "IDA1_Delta": 7.66,
+    "IDA2_Delta": 5.49,
+    "IDA3_Delta": 3.49,
+    "IDC_Delta": 8.38
+  },
+  {
+    "date": "2025-05-26",
+    "DA_Earnings": 116.57,
+    "IDA1_Delta": 12.94,
+    "IDA2_Delta": 0.66,
+    "IDA3_Delta": 2.31,
+    "IDC_Delta": 12.31
+  },
+  {
+    "date": "2025-05-27",
+    "DA_Earnings": 179.51,
+    "IDA1_Delta": 7.38,
+    "IDA2_Delta": 5.96,
+    "IDA3_Delta": 4.69,
+    "IDC_Delta": 18.97
+  },
+  {
+    "date": "2025-05-28",
+    "DA_Earnings": 168.55,
+    "IDA1_Delta": 6.82,
+    "IDA2_Delta": 2.72,
+    "IDA3_Delta": 1.42,
+    "IDC_Delta": 2.46
+  },
+  {
+    "date": "2025-05-29",
+    "DA_Earnings": 217.29,
+    "IDA1_Delta": 1.19,
+    "IDA2_Delta": 1.98,
+    "IDA3_Delta": 0.04,
+    "IDC_Delta": 7.78
+  },
+  {
+    "date": "2025-05-30",
+    "DA_Earnings": 213.3,
+    "IDA1_Delta": 0.54,
+    "IDA2_Delta": 5.57,
+    "IDA3_Delta": 5.55,
+    "IDC_Delta": 6.64
+  },
+  {
+    "date": "2025-05-31",
+    "DA_Earnings": 128.42,
+    "IDA1_Delta": 12.7,
+    "IDA2_Delta": 6.66,
+    "IDA3_Delta": 5.99,
+    "IDC_Delta": 22.21
+  },
+  {
+    "date": "2025-06-01",
+    "DA_Earnings": 92.34,
+    "IDA1_Delta": 16.74,
+    "IDA2_Delta": 2.57,
+    "IDA3_Delta": 1.65,
+    "IDC_Delta": 5.85
+  },
+  {
+    "date": "2025-06-02",
+    "DA_Earnings": 168.48,
+    "IDA1_Delta": 0.64,
+    "IDA2_Delta": 0.24,
+    "IDA3_Delta": 0.86,
+    "IDC_Delta": 3.47
+  },
+  {
+    "date": "2025-06-03",
+    "DA_Earnings": 184.49,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.42,
+    "IDA3_Delta": 0.61,
+    "IDC_Delta": 44.43
+  },
+  {
+    "date": "2025-06-04",
+    "DA_Earnings": 212.81,
+    "IDA1_Delta": 1.86,
+    "IDA2_Delta": 10.69,
+    "IDA3_Delta": 3.38,
+    "IDC_Delta": 27.13
+  },
+  {
+    "date": "2025-06-05",
+    "DA_Earnings": 240.03,
+    "IDA1_Delta": 1.48,
+    "IDA2_Delta": 1.08,
+    "IDA3_Delta": 4.81,
+    "IDC_Delta": 4.14
+  },
+  {
+    "date": "2025-06-06",
+    "DA_Earnings": 234.05,
+    "IDA1_Delta": 3.31,
+    "IDA2_Delta": 2.34,
+    "IDA3_Delta": 3.48,
+    "IDC_Delta": 9.79
+  },
+  {
+    "date": "2025-06-07",
+    "DA_Earnings": 184.49,
+    "IDA1_Delta": 11.03,
+    "IDA2_Delta": 3.91,
+    "IDA3_Delta": 0.51,
+    "IDC_Delta": 25.72
+  },
+  {
+    "date": "2025-06-08",
+    "DA_Earnings": 191.16,
+    "IDA1_Delta": 2.54,
+    "IDA2_Delta": 12.84,
+    "IDA3_Delta": 0.92,
+    "IDC_Delta": 8.65
+  },
+  {
+    "date": "2025-06-09",
+    "DA_Earnings": 216.8,
+    "IDA1_Delta": 1.23,
+    "IDA2_Delta": 7.33,
+    "IDA3_Delta": 5.49,
+    "IDC_Delta": 7.19
+  },
+  {
+    "date": "2025-06-10",
+    "DA_Earnings": 98.81,
+    "IDA1_Delta": 3.03,
+    "IDA2_Delta": 7.39,
+    "IDA3_Delta": 9.12,
+    "IDC_Delta": 23.84
+  },
+  {
+    "date": "2025-06-11",
+    "DA_Earnings": 192.16,
+    "IDA1_Delta": 2.01,
+    "IDA2_Delta": 1.41,
+    "IDA3_Delta": 2.43,
+    "IDC_Delta": 13.41
+  },
+  {
+    "date": "2025-06-12",
+    "DA_Earnings": 231.52,
+    "IDA1_Delta": 16.69,
+    "IDA2_Delta": 2.16,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 8.69
+  },
+  {
+    "date": "2025-06-13",
+    "DA_Earnings": 205.35,
+    "IDA1_Delta": 5.21,
+    "IDA2_Delta": 0.33,
+    "IDA3_Delta": -0.0,
+    "IDC_Delta": 9.18
+  },
+  {
+    "date": "2025-06-14",
+    "DA_Earnings": 179.16,
+    "IDA1_Delta": 14.07,
+    "IDA2_Delta": 0.81,
+    "IDA3_Delta": 0.11,
+    "IDC_Delta": 8.15
+  },
+  {
+    "date": "2025-06-15",
+    "DA_Earnings": 137.66,
+    "IDA1_Delta": 17.41,
+    "IDA2_Delta": 1.84,
+    "IDA3_Delta": 0.08,
+    "IDC_Delta": 12.56
+  },
+  {
+    "date": "2025-06-16",
+    "DA_Earnings": 318.87,
+    "IDA1_Delta": 1.81,
+    "IDA2_Delta": 6.21,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 3.95
+  },
+  {
+    "date": "2025-06-17",
+    "DA_Earnings": 230.61,
+    "IDA1_Delta": 3.03,
+    "IDA2_Delta": 6.19,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 4.77
+  },
+  {
+    "date": "2025-06-18",
+    "DA_Earnings": 225.99,
+    "IDA1_Delta": 0.8,
+    "IDA2_Delta": 12.7,
+    "IDA3_Delta": 1.46,
+    "IDC_Delta": 34.79
+  },
+  {
+    "date": "2025-06-19",
+    "DA_Earnings": 149.47,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 4.59,
+    "IDC_Delta": 7.21
+  },
+  {
+    "date": "2025-06-20",
+    "DA_Earnings": 133.96,
+    "IDA1_Delta": 0.3,
+    "IDA2_Delta": 2.64,
+    "IDA3_Delta": 1.79,
+    "IDC_Delta": 16.19
+  },
+  {
+    "date": "2025-06-21",
+    "DA_Earnings": 232.68,
+    "IDA1_Delta": 8.4,
+    "IDA2_Delta": 1.34,
+    "IDA3_Delta": 1.84,
+    "IDC_Delta": 10.21
+  },
+  {
+    "date": "2025-06-22",
+    "DA_Earnings": 223.32,
+    "IDA1_Delta": 4.46,
+    "IDA2_Delta": 2.01,
+    "IDA3_Delta": 0.14,
+    "IDC_Delta": 3.67
+  },
+  {
+    "date": "2025-06-23",
+    "DA_Earnings": 187.1,
+    "IDA1_Delta": 1.25,
+    "IDA2_Delta": 1.62,
+    "IDA3_Delta": 8.34,
+    "IDC_Delta": 11.69
+  },
+  {
+    "date": "2025-06-24",
+    "DA_Earnings": 240.47,
+    "IDA1_Delta": 0.54,
+    "IDA2_Delta": 0.92,
+    "IDA3_Delta": 12.63,
+    "IDC_Delta": 6.33
+  },
+  {
+    "date": "2025-06-25",
+    "DA_Earnings": 252.88,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 0.79,
+    "IDA3_Delta": 2.4,
+    "IDC_Delta": 7.4
+  },
+  {
+    "date": "2025-06-26",
+    "DA_Earnings": 195.54,
+    "IDA1_Delta": 0.99,
+    "IDA2_Delta": -0.0,
+    "IDA3_Delta": 7.71,
+    "IDC_Delta": 6.12
+  },
+  {
+    "date": "2025-06-27",
+    "DA_Earnings": 165.72,
+    "IDA1_Delta": 1.75,
+    "IDA2_Delta": 7.37,
+    "IDA3_Delta": 3.58,
+    "IDC_Delta": 4.06
+  },
+  {
+    "date": "2025-06-28",
+    "DA_Earnings": 223.08,
+    "IDA1_Delta": 1.28,
+    "IDA2_Delta": 4.62,
+    "IDA3_Delta": 9.91,
+    "IDC_Delta": 11.2
+  },
+  {
+    "date": "2025-06-29",
+    "DA_Earnings": 243.21,
+    "IDA1_Delta": 7.91,
+    "IDA2_Delta": 1.03,
+    "IDA3_Delta": 11.28,
+    "IDC_Delta": 4.51
+  },
+  {
+    "date": "2025-06-30",
+    "DA_Earnings": 126.45,
+    "IDA1_Delta": 15.67,
+    "IDA2_Delta": 8.14,
+    "IDA3_Delta": 7.18,
+    "IDC_Delta": 30.47
+  },
+  {
+    "date": "2025-07-01",
+    "DA_Earnings": 117.66,
+    "IDA1_Delta": 1.27,
+    "IDA2_Delta": 7.0,
+    "IDA3_Delta": 3.8,
+    "IDC_Delta": 9.51
+  },
+  {
+    "date": "2025-07-02",
+    "DA_Earnings": 72.29,
+    "IDA1_Delta": 9.03,
+    "IDA2_Delta": 4.06,
+    "IDA3_Delta": 9.52,
+    "IDC_Delta": 8.99
+  },
+  {
+    "date": "2025-07-03",
+    "DA_Earnings": 163.66,
+    "IDA1_Delta": 0.22,
+    "IDA2_Delta": 2.3,
+    "IDA3_Delta": 4.33,
+    "IDC_Delta": 18.68
+  },
+  {
+    "date": "2025-07-04",
+    "DA_Earnings": 88.7,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 13.47,
+    "IDA3_Delta": 0.3,
+    "IDC_Delta": 9.07
+  },
+  {
+    "date": "2025-07-05",
+    "DA_Earnings": 217.7,
+    "IDA1_Delta": 1.37,
+    "IDA2_Delta": 5.39,
+    "IDA3_Delta": 3.93,
+    "IDC_Delta": 27.94
+  },
+  {
+    "date": "2025-07-06",
+    "DA_Earnings": 185.11,
+    "IDA1_Delta": 20.01,
+    "IDA2_Delta": 3.43,
+    "IDA3_Delta": 4.81,
+    "IDC_Delta": 11.43
+  },
+  {
+    "date": "2025-07-07",
+    "DA_Earnings": 170.79,
+    "IDA1_Delta": 5.85,
+    "IDA2_Delta": 5.83,
+    "IDA3_Delta": 2.87,
+    "IDC_Delta": 14.46
+  },
+  {
+    "date": "2025-07-08",
+    "DA_Earnings": 184.67,
+    "IDA1_Delta": 5.22,
+    "IDA2_Delta": 6.32,
+    "IDA3_Delta": 0.57,
+    "IDC_Delta": 6.29
+  },
+  {
+    "date": "2025-07-09",
+    "DA_Earnings": 184.35,
+    "IDA1_Delta": -0.0,
+    "IDA2_Delta": 29.44,
+    "IDA3_Delta": 3.12,
+    "IDC_Delta": 50.7
+  },
+  {
+    "date": "2025-07-10",
+    "DA_Earnings": 126.19,
+    "IDA1_Delta": 3.97,
+    "IDA2_Delta": 24.32,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 11.36
+  },
+  {
+    "date": "2025-07-11",
+    "DA_Earnings": 112.64,
+    "IDA1_Delta": 13.35,
+    "IDA2_Delta": 3.61,
+    "IDA3_Delta": 1.15,
+    "IDC_Delta": 4.02
+  },
+  {
+    "date": "2025-07-12",
+    "DA_Earnings": 214.71,
+    "IDA1_Delta": 0.98,
+    "IDA2_Delta": 0.53,
+    "IDA3_Delta": 4.19,
+    "IDC_Delta": 29.15
+  },
+  {
+    "date": "2025-07-13",
+    "DA_Earnings": 220.25,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 14.7,
+    "IDA3_Delta": 5.16,
+    "IDC_Delta": 9.69
+  },
+  {
+    "date": "2025-07-14",
+    "DA_Earnings": 168.32,
+    "IDA1_Delta": 19.3,
+    "IDA2_Delta": 1.92,
+    "IDA3_Delta": 3.05,
+    "IDC_Delta": 4.41
+  },
+  {
+    "date": "2025-07-15",
+    "DA_Earnings": 170.38,
+    "IDA1_Delta": 8.46,
+    "IDA2_Delta": 4.38,
+    "IDA3_Delta": 4.49,
+    "IDC_Delta": 3.95
+  },
+  {
+    "date": "2025-07-16",
+    "DA_Earnings": 153.2,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 12.32,
+    "IDC_Delta": 30.27
+  },
+  {
+    "date": "2025-07-17",
+    "DA_Earnings": 71.54,
+    "IDA1_Delta": 13.32,
+    "IDA2_Delta": 15.5,
+    "IDA3_Delta": 2.71,
+    "IDC_Delta": 12.24
+  },
+  {
+    "date": "2025-07-18",
+    "DA_Earnings": 60.51,
+    "IDA1_Delta": 18.92,
+    "IDA2_Delta": 4.58,
+    "IDA3_Delta": 5.21,
+    "IDC_Delta": 22.04
+  },
+  {
+    "date": "2025-07-19",
+    "DA_Earnings": 176.02,
+    "IDA1_Delta": 9.88,
+    "IDA2_Delta": 3.52,
+    "IDA3_Delta": 5.78,
+    "IDC_Delta": 28.08
+  },
+  {
+    "date": "2025-07-20",
+    "DA_Earnings": 144.69,
+    "IDA1_Delta": 35.64,
+    "IDA2_Delta": 6.16,
+    "IDA3_Delta": 14.34,
+    "IDC_Delta": 13.84
+  },
+  {
+    "date": "2025-07-21",
+    "DA_Earnings": 273.33,
+    "IDA1_Delta": 8.29,
+    "IDA2_Delta": 2.08,
+    "IDA3_Delta": 11.25,
+    "IDC_Delta": 16.6
+  },
+  {
+    "date": "2025-07-22",
+    "DA_Earnings": 170.44,
+    "IDA1_Delta": 17.11,
+    "IDA2_Delta": 3.03,
+    "IDA3_Delta": 22.51,
+    "IDC_Delta": 12.41
+  },
+  {
+    "date": "2025-07-23",
+    "DA_Earnings": 97.79,
+    "IDA1_Delta": 4.68,
+    "IDA2_Delta": 6.31,
+    "IDA3_Delta": 8.78,
+    "IDC_Delta": 6.39
+  },
+  {
+    "date": "2025-07-24",
+    "DA_Earnings": 150.92,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 4.18,
+    "IDA3_Delta": 5.97,
+    "IDC_Delta": 3.09
+  },
+  {
+    "date": "2025-07-25",
+    "DA_Earnings": 174.36,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 4.2,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 4.02
+  },
+  {
+    "date": "2025-07-26",
+    "DA_Earnings": 163.68,
+    "IDA1_Delta": 2.9,
+    "IDA2_Delta": 0.82,
+    "IDA3_Delta": 0.62,
+    "IDC_Delta": 6.38
+  },
+  {
+    "date": "2025-07-27",
+    "DA_Earnings": 133.35,
+    "IDA1_Delta": 21.99,
+    "IDA2_Delta": 18.36,
+    "IDA3_Delta": 0.19,
+    "IDC_Delta": 1.17
+  },
+  {
+    "date": "2025-07-28",
+    "DA_Earnings": 137.69,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 0.0,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 18.44
+  },
+  {
+    "date": "2025-07-29",
+    "DA_Earnings": 170.84,
+    "IDA1_Delta": 2.59,
+    "IDA2_Delta": 1.78,
+    "IDA3_Delta": 1.12,
+    "IDC_Delta": 37.43
+  },
+  {
+    "date": "2025-07-30",
+    "DA_Earnings": 167.14,
+    "IDA1_Delta": 12.0,
+    "IDA2_Delta": 9.68,
+    "IDA3_Delta": 3.52,
+    "IDC_Delta": 16.25
+  },
+  {
+    "date": "2025-07-31",
+    "DA_Earnings": 143.59,
+    "IDA1_Delta": 16.25,
+    "IDA2_Delta": 8.39,
+    "IDA3_Delta": 1.18,
+    "IDC_Delta": 5.29
+  },
+  {
+    "date": "2025-08-01",
+    "DA_Earnings": 143.86,
+    "IDA1_Delta": 0.92,
+    "IDA2_Delta": 3.31,
+    "IDA3_Delta": 2.98,
+    "IDC_Delta": 4.73
+  },
+  {
+    "date": "2025-08-02",
+    "DA_Earnings": 169.39,
+    "IDA1_Delta": 8.39,
+    "IDA2_Delta": 0.41,
+    "IDA3_Delta": 3.71,
+    "IDC_Delta": 18.24
+  },
+  {
+    "date": "2025-08-03",
+    "DA_Earnings": 174.48,
+    "IDA1_Delta": 13.66,
+    "IDA2_Delta": 1.97,
+    "IDA3_Delta": 6.41,
+    "IDC_Delta": 1.92
+  },
+  {
+    "date": "2025-08-04",
+    "DA_Earnings": 253.76,
+    "IDA1_Delta": 7.28,
+    "IDA2_Delta": 5.61,
+    "IDA3_Delta": 0.22,
+    "IDC_Delta": 3.76
+  },
+  {
+    "date": "2025-08-05",
+    "DA_Earnings": 169.37,
+    "IDA1_Delta": 12.35,
+    "IDA2_Delta": 6.64,
+    "IDA3_Delta": 12.61,
+    "IDC_Delta": 8.51
+  },
+  {
+    "date": "2025-08-06",
+    "DA_Earnings": 217.61,
+    "IDA1_Delta": 1.03,
+    "IDA2_Delta": 9.9,
+    "IDA3_Delta": 7.38,
+    "IDC_Delta": 18.87
+  },
+  {
+    "date": "2025-08-07",
+    "DA_Earnings": 176.86,
+    "IDA1_Delta": 6.41,
+    "IDA2_Delta": 11.96,
+    "IDA3_Delta": 0.5,
+    "IDC_Delta": 7.19
+  },
+  {
+    "date": "2025-08-08",
+    "DA_Earnings": 212.67,
+    "IDA1_Delta": 12.45,
+    "IDA2_Delta": 4.54,
+    "IDA3_Delta": 3.13,
+    "IDC_Delta": 7.4
+  },
+  {
+    "date": "2025-08-09",
+    "DA_Earnings": 167.38,
+    "IDA1_Delta": 13.75,
+    "IDA2_Delta": 1.74,
+    "IDA3_Delta": 3.04,
+    "IDC_Delta": 9.68
+  },
+  {
+    "date": "2025-08-10",
+    "DA_Earnings": 228.83,
+    "IDA1_Delta": 10.84,
+    "IDA2_Delta": 0.13,
+    "IDA3_Delta": 4.65,
+    "IDC_Delta": 3.76
+  },
+  {
+    "date": "2025-08-11",
+    "DA_Earnings": 218.58,
+    "IDA1_Delta": 7.93,
+    "IDA2_Delta": 15.03,
+    "IDA3_Delta": 2.05,
+    "IDC_Delta": 6.3
+  },
+  {
+    "date": "2025-08-12",
+    "DA_Earnings": 197.9,
+    "IDA1_Delta": 2.46,
+    "IDA2_Delta": 3.41,
+    "IDA3_Delta": 0.0,
+    "IDC_Delta": 0.66
+  },
+  {
+    "date": "2025-08-13",
+    "DA_Earnings": 138.66,
+    "IDA1_Delta": 7.04,
+    "IDA2_Delta": 7.34,
+    "IDA3_Delta": 13.94,
+    "IDC_Delta": 8.75
+  },
+  {
+    "date": "2025-08-14",
+    "DA_Earnings": 149.04,
+    "IDA1_Delta": 6.02,
+    "IDA2_Delta": 4.23,
+    "IDA3_Delta": 0.2,
+    "IDC_Delta": 3.24
+  },
+  {
+    "date": "2025-08-15",
+    "DA_Earnings": 243.74,
+    "IDA1_Delta": 2.71,
+    "IDA2_Delta": 1.72,
+    "IDA3_Delta": 2.27,
+    "IDC_Delta": 6.06
+  },
+  {
+    "date": "2025-08-16",
+    "DA_Earnings": 237.55,
+    "IDA1_Delta": 11.47,
+    "IDA2_Delta": 3.56,
+    "IDA3_Delta": 1.11,
+    "IDC_Delta": 8.18
+  },
+  {
+    "date": "2025-08-17",
+    "DA_Earnings": 216.21,
+    "IDA1_Delta": 4.37,
+    "IDA2_Delta": 1.66,
+    "IDA3_Delta": 1.17,
+    "IDC_Delta": 2.78
+  },
+  {
+    "date": "2025-08-18",
+    "DA_Earnings": 76.75,
+    "IDA1_Delta": 15.03,
+    "IDA2_Delta": 3.11,
+    "IDA3_Delta": 8.42,
+    "IDC_Delta": 3.83
+  },
+  {
+    "date": "2025-08-19",
+    "DA_Earnings": 122.24,
+    "IDA1_Delta": 11.88,
+    "IDA2_Delta": 6.39,
+    "IDA3_Delta": 20.74,
+    "IDC_Delta": 5.23
+  },
+  {
+    "date": "2025-08-20",
+    "DA_Earnings": 112.76,
+    "IDA1_Delta": 0.0,
+    "IDA2_Delta": 13.49,
+    "IDA3_Delta": 0.25,
+    "IDC_Delta": 21.42
+  },
+  {
+    "date": "2025-08-21",
+    "DA_Earnings": 128.31,
+    "IDA1_Delta": 13.02,
+    "IDA2_Delta": 1.04,
+    "IDA3_Delta": 1.64,
+    "IDC_Delta": 7.3
+  },
+  {
+    "date": "2025-08-22",
+    "DA_Earnings": 167.5,
+    "IDA1_Delta": 16.99,
+    "IDA2_Delta": 20.55,
+    "IDA3_Delta": 3.98,
+    "IDC_Delta": 8.93
+  },
+  {
+    "date": "2025-08-23",
+    "DA_Earnings": 210.86,
+    "IDA1_Delta": 3.07,
+    "IDA2_Delta": 4.55,
+    "IDA3_Delta": 1.44,
+    "IDC_Delta": 4.6
+  },
+  {
+    "date": "2025-08-24",
+    "DA_Earnings": 196.11,
+    "IDA1_Delta": 12.2,
+    "IDA2_Delta": 1.32,
+    "IDA3_Delta": 3.6,
+    "IDC_Delta": 3.2
+  },
+  {
+    "date": "2025-08-25",
+    "DA_Earnings": 176.39,
+    "IDA1_Delta": 10.69,
+    "IDA2_Delta": 0.24,
+    "IDA3_Delta": 12.78,
+    "IDC_Delta": 7.03
+  },
+  {
+    "date": "2025-08-26",
+    "DA_Earnings": 140.06,
+    "IDA1_Delta": 7.63,
+    "IDA2_Delta": 8.18,
+    "IDA3_Delta": 20.19,
+    "IDC_Delta": 10.09
+  },
+  {
+    "date": "2025-08-27",
+    "DA_Earnings": 93.29,
+    "IDA1_Delta": 14.93,
+    "IDA2_Delta": 1.61,
+    "IDA3_Delta": 6.33,
+    "IDC_Delta": 0.86
+  },
+  {
+    "date": "2025-08-28",
+    "DA_Earnings": 161.56,
+    "IDA1_Delta": 12.05,
+    "IDA2_Delta": 4.88,
+    "IDA3_Delta": 5.77,
+    "IDC_Delta": 13.41
+  },
+  {
+    "date": "2025-08-29",
+    "DA_Earnings": 165.88,
+    "IDA1_Delta": 6.46,
+    "IDA2_Delta": 6.81,
+    "IDA3_Delta": 7.75,
+    "IDC_Delta": 20.06
+  },
+  {
+    "date": "2025-08-30",
+    "DA_Earnings": 177.02,
+    "IDA1_Delta": 8.89,
+    "IDA2_Delta": 0.66,
+    "IDA3_Delta": 4.32,
+    "IDC_Delta": 17.74
+  },
+  {
+    "date": "2025-08-31",
+    "DA_Earnings": 125.42,
+    "IDA1_Delta": 16.38,
+    "IDA2_Delta": 5.72,
+    "IDA3_Delta": 1.08,
+    "IDC_Delta": 6.18
+  },
+  {
+    "date": "2025-09-01",
+    "DA_Earnings": 163.89,
+    "IDA1_Delta": 6.64,
+    "IDA2_Delta": 0.81,
+    "IDA3_Delta": 0.86,
+    "IDC_Delta": 10.52
+  },
+  {
+    "date": "2025-09-02",
+    "DA_Earnings": 234.35,
+    "IDA1_Delta": 8.92,
+    "IDA2_Delta": 1.67,
+    "IDA3_Delta": 6.55,
+    "IDC_Delta": 29.89
+  },
+  {
+    "date": "2025-09-03",
+    "DA_Earnings": 204.79,
+    "IDA1_Delta": 20.16,
+    "IDA2_Delta": 0.5,
+    "IDA3_Delta": 8.89,
+    "IDC_Delta": 9.45
+  },
+  {
+    "date": "2025-09-04",
+    "DA_Earnings": 180.02,
+    "IDA1_Delta": 8.82,
+    "IDA2_Delta": 1.25,
+    "IDA3_Delta": 8.93,
+    "IDC_Delta": 11.7
+  },
+  {
+    "date": "2025-09-05",
+    "DA_Earnings": 177.91,
+    "IDA1_Delta": 6.16,
+    "IDA2_Delta": 0.24,
+    "IDA3_Delta": 0.04,
+    "IDC_Delta": 0.9
+  },
+  {
+    "date": "2025-09-06",
+    "DA_Earnings": 98.73,
+    "IDA1_Delta": 23.39,
+    "IDA2_Delta": 5.44,
+    "IDA3_Delta": 7.44,
+    "IDC_Delta": 26.18
+  },
+  {
+    "date": "2025-09-07",
+    "DA_Earnings": 183.99,
+    "IDA1_Delta": 9.72,
+    "IDA2_Delta": 2.5,
+    "IDA3_Delta": 0.15,
+    "IDC_Delta": 27.87
+  },
+  {
+    "date": "2025-09-08",
+    "DA_Earnings": 110.17,
+    "IDA1_Delta": 3.72,
+    "IDA2_Delta": 2.19,
+    "IDA3_Delta": 2.59,
+    "IDC_Delta": 1.2
+  },
+  {
+    "date": "2025-09-09",
+    "DA_Earnings": 171.18,
+    "IDA1_Delta": 8.45,
+    "IDA2_Delta": 1.23,
+    "IDA3_Delta": 3.32,
+    "IDC_Delta": 27.7
+  },
+  {
+    "date": "2025-09-10",
+    "DA_Earnings": 171.1,
+    "IDA1_Delta": 2.99,
+    "IDA2_Delta": 1.27,
+    "IDA3_Delta": 2.51,
+    "IDC_Delta": 18.18
+  },
+  {
+    "date": "2025-09-11",
+    "DA_Earnings": 214.07,
+    "IDA1_Delta": 16.66,
+    "IDA2_Delta": 2.02,
+    "IDA3_Delta": 1.0,
+    "IDC_Delta": 9.54
+  },
+  {
+    "date": "2025-09-12",
+    "DA_Earnings": 224.26,
+    "IDA1_Delta": 3.6,
+    "IDA2_Delta": 2.06,
+    "IDA3_Delta": 0.37,
+    "IDC_Delta": 1.11
+  },
+  {
+    "date": "2025-09-13",
+    "DA_Earnings": 175.32,
+    "IDA1_Delta": 13.54,
+    "IDA2_Delta": 5.8,
+    "IDA3_Delta": 2.5,
+    "IDC_Delta": 8.53
+  },
+  {
+    "date": "2025-09-14",
+    "DA_Earnings": 197.33,
+    "IDA1_Delta": 10.25,
+    "IDA2_Delta": 0.42,
+    "IDA3_Delta": 0.5,
+    "IDC_Delta": 9.12
+  },
+  {
+    "date": "2025-09-15",
+    "DA_Earnings": 181.8,
+    "IDA1_Delta": 1.41,
+    "IDA2_Delta": 6.66,
+    "IDA3_Delta": 0.11,
+    "IDC_Delta": 4.98
+  },
+  {
+    "date": "2025-09-16",
+    "DA_Earnings": 273.97,
+    "IDA1_Delta": 2.03,
+    "IDA2_Delta": 2.22,
+    "IDA3_Delta": 1.71,
+    "IDC_Delta": 2.76
+  },
+  {
+    "date": "2025-09-17",
+    "DA_Earnings": 278.75,
+    "IDA1_Delta": 1.4,
+    "IDA2_Delta": 0.73,
+    "IDA3_Delta": 24.85,
+    "IDC_Delta": 9.91
+  },
+  {
+    "date": "2025-09-18",
+    "DA_Earnings": 217.98,
+    "IDA1_Delta": 0.04,
+    "IDA2_Delta": 18.17,
+    "IDA3_Delta": 4.86,
+    "IDC_Delta": 7.92
+  },
+  {
+    "date": "2025-09-19",
+    "DA_Earnings": 148.81,
+    "IDA1_Delta": 8.5,
+    "IDA2_Delta": 3.67,
+    "IDA3_Delta": 8.35,
+    "IDC_Delta": 25.7
+  },
+  {
+    "date": "2025-09-20",
+    "DA_Earnings": 186.78,
+    "IDA1_Delta": 5.4,
+    "IDA2_Delta": 3.35,
+    "IDA3_Delta": 1.61,
+    "IDC_Delta": 11.59
+  },
+  {
+    "date": "2025-09-21",
+    "DA_Earnings": 112.78,
+    "IDA1_Delta": 19.83,
+    "IDA2_Delta": 3.75,
+    "IDA3_Delta": 2.63,
+    "IDC_Delta": 9.58
+  }
+]
