@@ -15,7 +15,7 @@ from flask import Flask
 # --- Config ---
 DATA_URL = os.environ.get(
     "DATA_URL",
-    "https://raw.githubusercontent.com/<username>/<repo>/main/BESS%20OMIE%20Results.json"
+    "https://raw.githubusercontent.com/AlejandroCastelloDiez/BESS-OMIE-Index/main/BESS%20OMIE%20Results.json"
 )
 WP_ORIGIN = os.environ.get("WP_ORIGIN", "https://yourwordpressdomain.com")
 
