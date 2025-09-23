@@ -77,7 +77,7 @@ def make_fig(df: pd.DataFrame):
 app.layout = html.Div(
     [
         html.H3("BESS OMIE Daily Earnings"),
-        dcc.Interval(id="tick", interval=15*60*1000, n_intervals=0),  # refresh every 15 min
+        dcc.Interval(id="tick", interval=12*60*60*1000, n_intervals=0),  
         dcc.Graph(id="chart"),
         html.Div(
             f"Data source: {DATA_URL}",
