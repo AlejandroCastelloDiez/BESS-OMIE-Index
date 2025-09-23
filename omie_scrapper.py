@@ -777,11 +777,8 @@ def json_to_df(path: str) -> pd.DataFrame:
     df = df.sort_values("date").reset_index(drop=True)
     return df
 
-from google.colab import drive
-# Connect to drive
-drive.mount("/content/drive",force_remount=True)
 
-JSON_PATH = "/content/drive/MyDrive/JSON Output Data OMIE Calculator/BESS OMIE Results.json"
+JSON_PATH = "BESS OMIE Results.json"
 
 
 
@@ -793,13 +790,23 @@ JSON_PATH = "/content/drive/MyDrive/JSON Output Data OMIE Calculator/BESS OMIE R
 #print("Backfill saved:", JSON_PATH)
 #display(json_to_df(JSON_PATH))
 
-# --- Daily run: compute and append/update a single day ---
-day = "20250921"  # or pd.Timestamp("today").strftime("%Y%m%d") if you're auto-running
-df_day = download_day_all_markets_es_wide(day, ida_sessions=(1,2,3))
-daily_summary = optimize_bess_day_summary(df_day)
-append_or_update_json(JSON_PATH, summary_df_to_records(daily_summary))
-print("Daily appended/updated:", day)
-display(json_to_df(JSON_PATH))
+if __name__ == "__main__":
+    # Path to JSON file in same folder
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    JSON_PATH = os.path.join(BASE_DIR, "BESS OMIE Results.json")
 
-res    = optimize_bess_day_sequential_orders(df_day)
-plot_prices_net_and_trades_total_cancels(df_day, res)
+    # Use yesterday’s date
+    day = (datetime.today() - timedelta(days=1)).strftime("%Y%m%d")
+    print("Processing day:", day)
+
+    # Download, optimize, update JSON
+    df_day = download_day_all_markets_es_wide(day, ida_sessions=(1,2,3))
+    if df_day.empty:
+        print("⚠️ No data for", day)
+    else:
+        daily_summary = optimize_bess_day_summary(df_day)
+        append_or_update_json(JSON_PATH, summary_df_to_records(daily_summary))
+        print("✅ Updated JSON:", JSON_PATH)
+
+        # Optional: show the last few records
+        print(json_to_df(JSON_PATH).tail())
