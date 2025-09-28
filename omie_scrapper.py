@@ -871,43 +871,47 @@ def plot_prices_net_and_trades_total_cancels(df_day, result,
                loc="center left", bbox_to_anchor=(1.01, 0.5),
                title=None, ncols=1)
 
-if save_dir is None:
-    save_dir = os.getcwd()
-os.makedirs(save_dir, exist_ok=True)
+    if save_dir is None:
+        save_dir = os.getcwd()
+    os.makedirs(save_dir, exist_ok=True)
 
-# If nothing to draw (all NaN/empty), drop a friendly note to avoid a white page
-try:
-    has_any_price = np.isfinite(df_day.get("DA_ES_PRICE", np.nan)).any() \
-                    or np.isfinite(df_day.get("IDA1_ES_PRICE", np.nan)).any() \
-                    or np.isfinite(df_day.get("IDA2_ES_PRICE", np.nan)).any() \
-                    or np.isfinite(df_day.get("IDA3_ES_PRICE", np.nan)).any() \
-                    or np.isfinite(df_day.get("IDC_MedioES", np.nan)).any()
-except Exception:
-    has_any_price = True  # default to true if columns differ
+    # Check if we have any data, otherwise put a message in the figure
+    try:
+        has_any_price = np.isfinite(df_day.get("DA_ES_PRICE", np.nan)).any() \
+                        or np.isfinite(df_day.get("IDA1_ES_PRICE", np.nan)).any() \
+                        or np.isfinite(df_day.get("IDA2_ES_PRICE", np.nan)).any() \
+                        or np.isfinite(df_day.get("IDA3_ES_PRICE", np.nan)).any() \
+                        or np.isfinite(df_day.get("IDC_MedioES", np.nan)).any()
+    except Exception:
+        has_any_price = True
 
-if not has_any_price:
-    # Write a simple title so the SVG is not blank
-    fig.text(0.5, 0.5, "No price data available", ha="center", va="center", fontsize=16)
+    if not has_any_price:
+        fig.text(0.5, 0.5, "No price data available",
+                 ha="center", va="center", fontsize=16)
 
-# Force a render before saving (prevents empty SVGs in headless CI)
-fig.canvas.draw()
+    # Force render to avoid blank SVGs in headless runners
+    fig.canvas.draw()
 
-if save_png:
-    if filename is None:
-        filename = f"OMIE_BESS_{title_date}.png"
-    out_path = os.path.join(save_dir, filename)
-    fig.savefig(out_path, dpi=dpi, bbox_inches="tight", facecolor="white", edgecolor="none", transparent=False)
-    print(f"Saved figure to: {out_path}")
+    if save_png:
+        if filename is None:
+            filename = f"OMIE_BESS_{title_date}.png"
+        out_path = os.path.join(save_dir, filename)
+        fig.savefig(out_path, dpi=dpi,
+                    bbox_inches="tight", facecolor="white")
+        print(f"Saved PNG to: {out_path}")
 
-if save_svg:
-    if filename_svg is None:
-        if filename and filename.lower().endswith(".png"):
-            filename_svg = filename[:-4] + ".svg"
-        else:
-            filename_svg = f"OMIE_BESS_{title_date}.svg"
-    out_svg = os.path.join(save_dir, filename_svg)
-    fig.savefig(out_svg, format="svg", bbox_inches="tight", facecolor="white", edgecolor="none", transparent=False)
-    print(f"Saved SVG to: {out_svg}")
+    if save_svg:
+        if filename_svg is None:
+            if filename and filename.lower().endswith(".png"):
+                filename_svg = filename[:-4] + ".svg"
+            else:
+                filename_svg = f"OMIE_BESS_{title_date}.svg"
+        out_svg = os.path.join(save_dir, filename_svg)
+        fig.savefig(out_svg, format="svg",
+                    bbox_inches="tight", facecolor="white")
+        print(f"Saved SVG to: {out_svg}")
+
+    plt.close(fig)
 
     plt.close(fig)  # IMPORTANT: avoid leaking a blank figure into the next save
     # Keep x-limits consistent with edges so the SoC line spans exactly the bars
