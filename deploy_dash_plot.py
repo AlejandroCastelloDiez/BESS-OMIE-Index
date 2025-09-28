@@ -41,31 +41,38 @@ def _health():
 # -------------------- Data helpers --------------------
 def _load_json() -> List[Dict[str, Any]]:
     """
-    Load list[dict] from local DATA_SOURCE or remote DATA_URL.
-    Remote loads include a 5-min cache-busting query param.
+    Load list[dict] from local DATA_SOURCE (if it exists) or remote DATA_URL.
+    Accepts top-level list, or dict wrapping the list under common keys.
     """
-    src = None
     try:
+        use_local = False
         if DATA_SOURCE:
             p = Path(DATA_SOURCE)
-            if not p.exists():
-                return []
-            src = f"file://{p}"
-            data = json.loads(p.read_text(encoding="utf-8"))
+            use_local = p.exists() and p.is_file()
+
+        if use_local:
+            raw = json.loads(Path(DATA_SOURCE).read_text(encoding="utf-8"))
         else:
-            # Remote
-            bust = int(time.time() // 300)  # 5-minute cache buster
+            bust = int(time.time() // 300)  # 5-min cache buster
             url = f"{DATA_URL}?t={bust}"
-            src = url
             r = requests.get(url, timeout=20)
             r.raise_for_status()
-            data = r.json()
-        if isinstance(data, list):
-            return data
+            raw = r.json()
+
+        # Normalize shapes
+        if isinstance(raw, list):
+            return raw
+        if isinstance(raw, dict):
+            for k in ("rows", "data", "items", "results"):
+                if k in raw and isinstance(raw[k], list):
+                    return raw[k]
+        # Fallback: single dict -> wrap
+        if isinstance(raw, dict):
+            return [raw]
         return []
     except Exception:
-        # Keep it quiet for the UI; status label will show "No data"
         return []
+
 
 def _to_df(rows: List[Dict[str, Any]]) -> pd.DataFrame:
     """
