@@ -1045,12 +1045,12 @@ def json_to_df(path: str) -> pd.DataFrame:
     return df
 
 if __name__ == "__main__":
-    # Path to JSON file in same folder
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    # Path to JSON & SVG in the repo root (same folder as this file)
+    BASE_DIR  = os.path.dirname(os.path.abspath(__file__))
     JSON_PATH = os.path.join(BASE_DIR, "BESS OMIE Results.json")
     PLOT_PATH = os.path.join(BASE_DIR, "OMIE_BESS.svg")
 
-    # Use yesterday’s date
+    # Yesterday’s date
     day = (datetime.today() - timedelta(days=1)).strftime("%Y%m%d")
     print("Processing day:", day)
 
@@ -1062,20 +1062,28 @@ if __name__ == "__main__":
         daily_summary = optimize_bess_day_summary(df_day)
         append_or_update_json(JSON_PATH, summary_df_to_records(daily_summary))
         print("✅ Updated JSON:", JSON_PATH)
-
-        # Optional: show the last few records
         print(json_to_df(JSON_PATH).tail())
 
-        # Also save an SVG chart in the same folder as the JSON
+        # Save SVG right next to JSON (directory = BASE_DIR, filename = OMIE_BESS.svg)
         try:
             plot_prices_net_and_trades_total_cancels(
                 df_day,
                 result=daily_summary,
                 save_png=False,
                 save_svg=True,
-                save_dir=PLOT_PATH,
+                save_dir=BASE_DIR,         
                 filename_svg="OMIE_BESS.svg",
                 dpi=220
             )
+            print(f"✅ Saved SVG to: {PLOT_PATH}")
         except Exception as e:
-            print(f"⚠️ Could not save SVG: {e}")
+            print(f"⚠️ Could not save SVG via plotter: {e}")
+            # Fallback: try saving whatever current figure exists
+            try:
+                import matplotlib
+                matplotlib.use("Agg")
+                import matplotlib.pyplot as plt
+                plt.savefig(PLOT_PATH, format="svg", bbox_inches="tight", facecolor="white")
+                print(f"✅ Fallback saved SVG to: {PLOT_PATH}")
+            except Exception as ee:
+                print(f"❌ Fallback save failed: {ee}")
