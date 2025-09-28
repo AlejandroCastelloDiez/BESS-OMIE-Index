@@ -1063,40 +1063,45 @@ def json_to_df(path: str) -> pd.DataFrame:
     df = df.sort_values("date").reset_index(drop=True)
     return df
 
-# Use yesterday’s date
-day = (datetime.today() - timedelta(days=1)).strftime("%Y%m%d")
-print("Processing day:", day)
-
-df_day = download_day_all_markets_es_wide(day, ida_sessions=(1,2,3))
-if df_day.empty:
-    print("⚠️ No data for", day)
-else:
-    # 1) Run full optimization -> dict-like per-QH result
-    full_result = optimize_bess_day(df_day)          # <-- this returns the arrays & orders the plot needs
-
-    # 2) Build the daily summary for JSON (use existing helper or from full_result)
-    daily_summary = optimize_bess_day_summary(df_day)  # ok to keep if you prefer this path
-    # (If you have a helper like `result_to_summary_df(full_result)`, you can use that instead.)
-
-    append_or_update_json(JSON_PATH, summary_df_to_records(daily_summary))
-    print("✅ Updated JSON:", JSON_PATH)
-    print(json_to_df(JSON_PATH).tail())
-
-    # 3) Plot with the FULL RESULT (not the summary DF)
-    try:
-        plot_prices_net_and_trades_total_cancels(
-            df_day,
-            result=full_result,       # <-- IMPORTANT
-            save_png=False,
-            save_svg=True,
-            save_dir=BASE_DIR,
-            filename_svg="OMIE_BESS.svg",
-            dpi=220
-        )
-        print(f"✅ Saved SVG to: {PLOT_PATH}")
+if __name__ == "__main__":
+    # Path to JSON & SVG in the repo root (same folder as this file)
+    BASE_DIR  = os.path.dirname(os.path.abspath(__file__))
+    JSON_PATH = os.path.join(BASE_DIR, "BESS OMIE Results.json")
+    PLOT_PATH = os.path.join(BASE_DIR, "OMIE_BESS.svg")
+    # Use yesterday’s date
+    day = (datetime.today() - timedelta(days=1)).strftime("%Y%m%d")
+    print("Processing day:", day)
+    
+    df_day = download_day_all_markets_es_wide(day, ida_sessions=(1,2,3))
+    if df_day.empty:
+        print("⚠️ No data for", day)
+    else:
+        # 1) Run full optimization -> dict-like per-QH result
+        full_result = optimize_bess_day(df_day)          # <-- this returns the arrays & orders the plot needs
+    
+        # 2) Build the daily summary for JSON (use existing helper or from full_result)
+        daily_summary = optimize_bess_day_summary(df_day)  # ok to keep if you prefer this path
+        # (If you have a helper like `result_to_summary_df(full_result)`, you can use that instead.)
+    
+        append_or_update_json(JSON_PATH, summary_df_to_records(daily_summary))
+        print("✅ Updated JSON:", JSON_PATH)
+        print(json_to_df(JSON_PATH).tail())
+    
+        # 3) Plot with the FULL RESULT (not the summary DF)
         try:
-            print("SVG size:", os.path.getsize(PLOT_PATH), "bytes")
-        except Exception:
-            pass
-    except Exception as e:
-        print(f"⚠️ Could not save SVG: {e}")
+            plot_prices_net_and_trades_total_cancels(
+                df_day,
+                result=full_result,       # <-- IMPORTANT
+                save_png=False,
+                save_svg=True,
+                save_dir=BASE_DIR,
+                filename_svg="OMIE_BESS.svg",
+                dpi=220
+            )
+            print(f"✅ Saved SVG to: {PLOT_PATH}")
+            try:
+                print("SVG size:", os.path.getsize(PLOT_PATH), "bytes")
+            except Exception:
+                pass
+        except Exception as e:
+            print(f"⚠️ Could not save SVG: {e}")
