@@ -1,5 +1,7 @@
 import requests
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 from datetime import datetime, timedelta
 from io import StringIO
 from matplotlib.lines import Line2D
@@ -1071,7 +1073,7 @@ if __name__ == "__main__":
                 save_png=False,
                 save_svg=True,
                 save_dir=BASE_DIR,
-                filename_svg=f"OMIE_BESS.svg",
+                filename_svg="OMIE_BESS.svg",
                 dpi=220
             )
         except Exception as e:
