@@ -1048,6 +1048,7 @@ if __name__ == "__main__":
     # Path to JSON file in same folder
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     JSON_PATH = os.path.join(BASE_DIR, "BESS OMIE Results.json")
+    PLOT_PATH = os.path.join(BASE_DIR, "OMIE_BESS.svg")
 
     # Use yesterday’s date
     day = (datetime.today() - timedelta(days=1)).strftime("%Y%m%d")
@@ -1072,7 +1073,7 @@ if __name__ == "__main__":
                 result=daily_summary,
                 save_png=False,
                 save_svg=True,
-                save_dir=BASE_DIR,
+                save_dir=PLOT_PATH,
                 filename_svg="OMIE_BESS.svg",
                 dpi=220
             )
