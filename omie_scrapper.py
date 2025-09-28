@@ -1112,21 +1112,31 @@ if __name__ == "__main__":
     day = (datetime.today() - timedelta(days=1)).strftime("%Y%m%d")
     print("Processing day:", day)
 
-    # Download + summary (your original call pattern)
+    # Download all prices for the day
     df_day = download_day_all_markets_es_wide(day, ida_sessions=(1,2,3))
     if df_day.empty:
         print("⚠️ No data for", day)
     else:
-        daily_summary = optimize_bess_day_summary(df_day)
+        # 1) Per-QH result for the plotter (arrays + orders by stage)
+        full_result = optimize_bess_day_sequential_orders(df_day)
 
-        # Update JSON
+        # 2) One-row daily summary for JSON (keeps your existing pipeline)
+        daily_summary = optimize_bess_day_summary(df_day)
         append_or_update_json(JSON_PATH, summary_df_to_records(daily_summary))
         print("✅ Updated JSON:", JSON_PATH)
         print(json_to_df(JSON_PATH).tail())
 
-        # Save a simple, reliable SVG next to the JSON
+        # 3) Plot the full “net & trades” chart to SVG in repo root
         try:
-            save_daily_svg_prices(df_day, PLOT_PATH)
+            plot_prices_net_and_trades_total_cancels(
+                df_day,
+                result=full_result,        # <-- IMPORTANT: use full per-QH result
+                save_png=False,
+                save_svg=True,
+                save_dir=BASE_DIR,
+                filename_svg="OMIE_BESS.svg",
+                dpi=220
+            )
             print(f"✅ Saved SVG to: {PLOT_PATH}")
             try:
                 print("SVG size:", os.path.getsize(PLOT_PATH), "bytes")
