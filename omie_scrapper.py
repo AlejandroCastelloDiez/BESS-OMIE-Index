@@ -1070,11 +1070,9 @@ if __name__ == "__main__":
                 result=daily_summary,
                 save_png=False,
                 save_svg=True,
-                save_dir=os.path.dirname(BASE_DIR),
+                save_dir=BASE_DIR,
                 filename_svg=f"OMIE_BESS.svg",
                 dpi=220
             )
         except Exception as e:
             print(f"⚠️ Could not save SVG: {e}")
-        # Optional: show the last few records
-        print(json_to_df(JSON_PATH).tail())
