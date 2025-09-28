@@ -1070,7 +1070,7 @@ if __name__ == "__main__":
                 result=daily_summary,
                 save_png=False,
                 save_svg=True,
-                save_dir=os.path.dirname(JSON_PATH),
+                save_dir=os.path.dirname(BASE_DIR),
                 filename_svg=f"OMIE_BESS.svg",
                 dpi=220
             )
