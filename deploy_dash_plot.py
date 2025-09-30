@@ -151,18 +151,19 @@ def make_stacked_area(df: pd.DataFrame, include_intraday, visible_total: pd.Seri
     # Visible Total overlay (thin, not stacked)
     fig.add_trace(go.Scatter(
         x=df["date"], y=visible_total,
-        mode="lines", name="Visible Total (overlay)",
+        mode="lines", name="Total (overlay)",
         line=dict(width=1),
-        hovertemplate="Visible Total: €%{y:.2f}<extra></extra>",
+        hovertemplate="Total: €%{y:.2f}<extra></extra>",
     ))
 
     fig.update_layout(
-        title="Perfect Foresight - 1MW 2h 1c/d BESS",
+        title="",
         xaxis_title="Date",
         yaxis_title="€/MW",
         hovermode="x unified",
         margin=dict(l=40, r=20, t=60, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+        font=dict(family="Inter, Arial, sans-serif")
     )
     fig.update_yaxes(tickprefix="€")
     return fig
@@ -185,7 +186,7 @@ else:
 app.layout = html.Div(
     style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem"},
     children=[
-        html.H2("Stacked Earnings by Date"),
+        html.H2("OMIE Perfect Foresight BESS Revenues - 2h 1 cycle per day"),
         html.Div(
             style={"display": "flex", "gap": "1rem", "flexWrap": "wrap", "alignItems": "center"},
             children=[
