@@ -73,7 +73,6 @@ def _load_json() -> List[Dict[str, Any]]:
     except Exception:
         return []
 
-
 def _to_df(rows: List[Dict[str, Any]]) -> pd.DataFrame:
     """
     Convert list of dicts -> DataFrame, coerce numerics, parse/sort dates, sum duplicates.
@@ -104,7 +103,7 @@ def _to_df(rows: List[Dict[str, Any]]) -> pd.DataFrame:
           .reset_index(drop=True)
     )
 
-    # Total per day
+    # Total per day (all layers)
     df["Total"] = df[SERIES_ORDER].sum(axis=1)
     return df
 
@@ -114,7 +113,17 @@ def _fmt_euro(v: float) -> str:
     except Exception:
         return "€0.00"
 
-def make_stacked_area(df: pd.DataFrame, include_intraday) -> go.Figure:
+# --- Compute Visible Total (DA + selected intraday layers) ---
+def _compute_visible_total(df: pd.DataFrame, selected_layers: list) -> pd.Series:
+    """Return a Series = DA_Earnings + sum(selected intraday layers)."""
+    selected_layers = list(selected_layers or [])
+    cols = ["DA_Earnings"] + [c for c in selected_layers if c in INTRADAY_SERIES]
+    cols = [c for c in cols if c in df.columns]
+    if not cols:
+        return pd.Series(0.0, index=df.index)
+    return df[cols].sum(axis=1)
+
+def make_stacked_area(df: pd.DataFrame, include_intraday, visible_total: pd.Series) -> go.Figure:
     df = df.sort_values("date").copy()
     fig = go.Figure()
 
@@ -139,14 +148,13 @@ def make_stacked_area(df: pd.DataFrame, include_intraday) -> go.Figure:
             hovertemplate=f"{pretty}: €%{{y:.2f}}<extra></extra>",
         ))
 
-    # Total overlay (thin, not stacked)
-    if "Total" in df.columns:
-        fig.add_trace(go.Scatter(
-            x=df["date"], y=df["Total"],
-            mode="lines", name="Total (overlay)",
-            line=dict(width=1),
-            hovertemplate="Total: €%{y:.2f}<extra></extra>",
-        ))
+    # Visible Total overlay (thin, not stacked)
+    fig.add_trace(go.Scatter(
+        x=df["date"], y=visible_total,
+        mode="lines", name="Visible Total (overlay)",
+        line=dict(width=1),
+        hovertemplate="Visible Total: €%{y:.2f}<extra></extra>",
+    ))
 
     fig.update_layout(
         title="Perfect Foresight - 1MW 2h 1c/d BESS",
@@ -174,8 +182,6 @@ else:
     default_end = max_day
     default_start = max(min_day, max_day - timedelta(days=365))
 
-DATA_LABEL = DATA_SOURCE if DATA_SOURCE else DATA_URL
-
 app.layout = html.Div(
     style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem"},
     children=[
@@ -183,7 +189,7 @@ app.layout = html.Div(
         html.Div(
             style={"display": "flex", "gap": "1rem", "flexWrap": "wrap", "alignItems": "center"},
             children=[
-                html.Div([html.Label("Data source:"), html.Code(DATA_LABEL, style={"fontSize": "0.9rem"})]),
+                # (Data source display removed on purpose)
                 html.Div(
                     [
                         html.Label("Show intraday layers:"),
@@ -224,19 +230,19 @@ app.layout = html.Div(
                 html.Div(
                     style={"padding": "12px 14px", "border": "1px solid #e5e7eb", "borderRadius": "12px",
                            "boxShadow": "0 1px 2px rgba(0,0,0,0.04)"},
-                    children=[html.Div("YTD Total (calendar year)", style={"fontSize": "0.85rem", "color": "#555"}),
+                    children=[html.Div("YTD Total (calendar year, visible layers)", style={"fontSize": "0.85rem", "color": "#555"}),
                               html.Div(id="kpi-ytd-value", style={"fontSize": "1.2rem", "fontWeight": "600"})],
                 ),
                 html.Div(
                     style={"padding": "12px 14px", "border": "1px solid #e5e7eb", "borderRadius": "12px",
                            "boxShadow": "0 1px 2px rgba(0,0,0,0.04)"},
-                    children=[html.Div("Avg Daily Total (selected range)", style={"fontSize": "0.85rem", "color": "#555"}),
+                    children=[html.Div("Avg Daily (selected range, visible layers)", style={"fontSize": "0.85rem", "color": "#555"}),
                               html.Div(id="kpi-avg-value", style={"fontSize": "1.2rem", "fontWeight": "600"})],
                 ),
                 html.Div(
                     style={"padding": "12px 14px", "border": "1px solid #e5e7eb", "borderRadius": "12px",
                            "boxShadow": "0 1px 2px rgba(0,0,0,0.04)"},
-                    children=[html.Div("Expected Yearly Total (avg × 365)", style={"fontSize": "0.85rem", "color": "#555"}),
+                    children=[html.Div("Expected Yearly (avg × 365, visible layers)", style={"fontSize": "0.85rem", "color": "#555"}),
                               html.Div(id="kpi-exp-value", style={"fontSize": "1.2rem", "fontWeight": "600"})],
                 ),
             ],
@@ -271,7 +277,7 @@ def update_chart(selected_layers, start_date, end_date, _n):
             yaxis_title="€",
             margin=dict(l=40, r=20, t=60, b=40),
         )
-        return empty, "No data found or failed to load. Check DATA_URL/DATA_SOURCE.", "€0.00", "€0.00", "€0.00"
+        return empty, "No data found or failed to load. Check data source.", "€0.00", "€0.00", "€0.00"
 
     # Filter by date range
     df_range = df.copy()
@@ -284,16 +290,27 @@ def update_chart(selected_layers, start_date, end_date, _n):
     if df_range.empty:
         df_range = df.copy()  # fallback to avoid blank chart
 
-    # KPIs
+    # Visible totals (for KPIs & overlay)
+    visible_total_full  = _compute_visible_total(df, selected_layers)
+    visible_total_range = _compute_visible_total(df_range, selected_layers)
+
+    # KPIs (based on visible layers)
     today = pd.Timestamp.today().normalize()
     ytd_mask = (df["date"] >= pd.Timestamp(today.year, 1, 1)) & (df["date"] <= today)
-    ytd_total = float(df.loc[ytd_mask, "Total"].sum()) if "Total" in df.columns else 0.0
+    ytd_total = float(visible_total_full[ytd_mask].sum())
 
-    avg_daily = float(df_range["Total"].mean()) if not df_range.empty else 0.0
+    avg_daily = float(visible_total_range.mean()) if not df_range.empty else 0.0
     expected_yearly = avg_daily * 365.0
 
-    fig = make_stacked_area(df_range, include_intraday=(selected_layers or []))
-    status = f"Loaded {len(df_range)} days · First: {df_range['date'].min().date()} · Last: {df_range['date'].max().date()}"
+    fig = make_stacked_area(
+        df_range,
+        include_intraday=(selected_layers or []),
+        visible_total=visible_total_range,
+    )
+    status = (
+        f"Loaded {len(df_range)} days · First: {df_range['date'].min().date()} · "
+        f"Last: {df_range['date'].max().date()} · Layers: DA + {', '.join(selected_layers or [])}"
+    )
 
     return fig, status, _fmt_euro(ytd_total), _fmt_euro(avg_daily), _fmt_euro(expected_yearly)
 
