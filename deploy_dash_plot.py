@@ -163,7 +163,7 @@ def make_stacked_area(df: pd.DataFrame, include_intraday, visible_total: pd.Seri
         hovermode="x unified",
         margin=dict(l=40, r=20, t=60, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
-        font=dict(family="Inter, Arial, sans-serif")
+        font=dict(family="Arial, sans-serif")
     )
     fig.update_yaxes(tickprefix="€")
     return fig
@@ -184,16 +184,17 @@ else:
     default_start = max(min_day, max_day - timedelta(days=365))
 
 app.layout = html.Div(
-    style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem","fontFamily": "Arial, sans-serif"},
+    style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem", "fontFamily": "Arial, sans-serif"},
     children=[
         html.H2("OMIE Perfect Foresight BESS Revenues - 2h 1 cycle per day"),
+
+        # Top controls: only the intraday layer toggles
         html.Div(
             style={"display": "flex", "gap": "1rem", "flexWrap": "wrap", "alignItems": "center"},
             children=[
-                # (Data source display removed on purpose)
                 html.Div(
                     [
-                        html.Label("Show intraday layers:"),
+                        html.Label("Show intraday layers:", style={"fontWeight": 600}),
                         dcc.Checklist(
                             id="layers",
                             options=[{"label": s.replace("_", " ").replace("Delta", "Δ"), "value": s} for s in INTRADAY_SERIES],
@@ -202,17 +203,6 @@ app.layout = html.Div(
                         ),
                     ],
                     style={"fontSize": "0.95rem"},
-                ),
-                html.Div(
-                    [
-                        html.Label("Date range:"),
-                        dcc.DatePickerRange(
-                            id="range",
-                            start_date=default_start,
-                            end_date=default_end,
-                            display_format="YYYY-MM-DD",
-                        ),
-                    ]
                 ),
             ],
         ),
@@ -249,15 +239,35 @@ app.layout = html.Div(
             ],
         ),
 
+        # Date range selector under the KPIs (card style)
+        html.Div(
+            style={
+                "padding": "12px 14px",
+                "border": "1px solid #e5e7eb",
+                "borderRadius": "12px",
+                "boxShadow": "0 1px 2px rgba(0,0,0,0.04)",
+                "marginBottom": "8px",
+                "display": "inline-block"
+            },
+            children=[
+                html.Label("Date range", style={"fontWeight": 600, "display": "block", "marginBottom": "6px"}),
+                dcc.DatePickerRange(
+                    id="range",
+                    start_date=default_start,
+                    end_date=default_end,
+                    display_format="YYYY-MM-DD",
+                ),
+            ],
+        ),
+
         dcc.Graph(id="stacked-graph", config={"displaylogo": False}),
         dcc.Interval(id="refresh", interval=REFRESH_MS, n_intervals=0),
-        html.Div(id="data-status", style={"fontSize": "0.85rem", "color": "#555"}),
+        # removed data-status line
     ],
 )
 
 @callback(
     Output("stacked-graph", "figure"),
-    Output("data-status", "children"),
     Output("kpi-ytd-value", "children"),
     Output("kpi-avg-value", "children"),
     Output("kpi-exp-value", "children"),
@@ -277,8 +287,9 @@ def update_chart(selected_layers, start_date, end_date, _n):
             xaxis_title="Date",
             yaxis_title="€",
             margin=dict(l=40, r=20, t=60, b=40),
+            font=dict(family="Arial, sans-serif"),
         )
-        return empty, "No data found or failed to load. Check data source.", "€0.00", "€0.00", "€0.00"
+        return empty, "€0.00", "€0.00", "€0.00"
 
     # Filter by date range
     df_range = df.copy()
@@ -308,14 +319,12 @@ def update_chart(selected_layers, start_date, end_date, _n):
         include_intraday=(selected_layers or []),
         visible_total=visible_total_range,
     )
-    status = (
-        f"Loaded {len(df_range)} days · First: {df_range['date'].min().date()} · "
-        f"Last: {df_range['date'].max().date()} · Layers: DA + {', '.join(selected_layers or [])}"
-    )
+    fig.update_layout(font=dict(family="Arial, sans-serif"))
 
-    return fig, status, _fmt_euro(ytd_total), _fmt_euro(avg_daily), _fmt_euro(expected_yearly)
+    return fig, _fmt_euro(ytd_total), _fmt_euro(avg_daily), _fmt_euro(expected_yearly)
 
 # Local debugging
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port=int(os.environ.get("PORT", "8050")), debug=True)
+
 
