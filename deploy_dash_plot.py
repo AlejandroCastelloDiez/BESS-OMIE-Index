@@ -184,7 +184,7 @@ else:
     default_start = max(min_day, max_day - timedelta(days=365))
 
 app.layout = html.Div(
-    style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem"},
+    style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem","fontFamily": "Arial, sans-serif"},
     children=[
         html.H2("OMIE Perfect Foresight BESS Revenues - 2h 1 cycle per day"),
         html.Div(
