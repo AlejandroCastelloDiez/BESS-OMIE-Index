@@ -17,15 +17,7 @@ URL_DA   = "https://www.omie.es/es/file-download?parents=marginalpdbc&filename=m
 URL_IDA  = "https://www.omie.es/es/file-download?parents=marginalpibc&filename=marginalpibc_{date}{sess}.1"
 URL_IDC  = "https://www.omie.es/es/file-download?parents=precios_pibcic&filename=precios_pibcic_{date}.1"
 
-# OMIE Data Functions
-
-# ---------------- URLs ----------------
-URL_DA   = "https://www.omie.es/es/file-download?parents=marginalpdbc&filename=marginalpdbc_{date}.1"
-URL_IDA  = "https://www.omie.es/es/file-download?parents=marginalpibc&filename=marginalpibc_{date}{sess}.1"
-URL_IDC  = "https://www.omie.es/es/file-download?parents=precios_pibcic&filename=precios_pibcic_{date}.1"
-
 def _download_text(url: str):
-    """Return text on success; None if 404/timeout/any error."""
     try:
         r = requests.get(url, timeout=30)
         if r.status_code == 404:
@@ -36,7 +28,6 @@ def _download_text(url: str):
         return None
 
 def _clean_numeric(s: str) -> float:
-    """Tolerant numeric parse: '72,20' -> 72.20, '.52' -> 0.52, else NaN on failure."""
     if s is None:
         return float("nan")
     s = s.strip().replace(",", ".")
@@ -48,7 +39,6 @@ def _clean_numeric(s: str) -> float:
         return float("nan")
 
 def _strip_header_footer_lines(lines):
-    """Drop optional first 'MARGINAL...' line and trailing '*' line."""
     if lines and lines[0].strip().upper().startswith("MARGINAL"):
         lines = lines[1:]
     if lines and lines[-1].strip().startswith("*"):
@@ -356,7 +346,7 @@ E_MAX = 2.0
 DT    = 0.25
 RTE   = 0.85
 MARKET_EPS = 1e-3
-MIN_LOT = 0.0  # honored when emitting orders only
+MIN_LOT = 0.0 
 
 # Split efficiency (exact RTE with symmetric split by default)
 ETA_C = float(np.sqrt(RTE))
@@ -1115,7 +1105,7 @@ if __name__ == "__main__":
     # Download all prices for the day
     df_day = download_day_all_markets_es_wide(day, ida_sessions=(1,2,3))
     if df_day.empty:
-        print("⚠️ No data for", day)
+        print("No data for", day)
     else:
         # 1) Per-QH result for the plotter (arrays + orders by stage)
         full_result = optimize_bess_day_sequential_orders(df_day)
@@ -1123,7 +1113,7 @@ if __name__ == "__main__":
         # 2) One-row daily summary for JSON (keeps your existing pipeline)
         daily_summary = optimize_bess_day_summary(df_day)
         append_or_update_json(JSON_PATH, summary_df_to_records(daily_summary))
-        print("✅ Updated JSON:", JSON_PATH)
+        print("Updated JSON:", JSON_PATH)
         print(json_to_df(JSON_PATH).tail())
 
         # 3) Plot the full “net & trades” chart to SVG in repo root
@@ -1137,10 +1127,10 @@ if __name__ == "__main__":
                 filename_svg="OMIE_BESS.svg",
                 dpi=220
             )
-            print(f"✅ Saved SVG to: {PLOT_PATH}")
+            print(f"Saved SVG to: {PLOT_PATH}")
             try:
                 print("SVG size:", os.path.getsize(PLOT_PATH), "bytes")
             except Exception:
                 pass
         except Exception as e:
-            print(f"⚠️ Could not save SVG: {e}")
+            print(f"Could not save SVG: {e}")
