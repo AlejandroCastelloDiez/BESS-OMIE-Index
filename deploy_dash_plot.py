@@ -27,11 +27,31 @@ INTRADAY_SERIES = [s for s in SERIES_ORDER if s != "DA_Earnings"]
 # -------------------- Flask base (iframe headers) --------------------
 server = Flask(__name__)
 
+# Allow multiple origins (comma-separated). Falls back to WP_ORIGIN for backward-compat.
+ALLOWED_EMBED_ORIGINS = os.environ.get(
+    "ALLOWED_EMBED_ORIGINS",
+    os.environ.get("WP_ORIGIN", "")
+).strip()
+
+def _csp_frame_ancestors_value() -> str:
+    parts = ["'self'"]
+    if ALLOWED_EMBED_ORIGINS:
+        parts += [t.strip() for t in ALLOWED_EMBED_ORIGINS.split(",") if t.strip()]
+    # de-duplicate while preserving order
+    seen = set(); out = []
+    for p in parts:
+        if p not in seen:
+            out.append(p); seen.add(p)
+    return " ".join(out)
+
 @server.after_request
 def add_frame_headers(resp):
-    # Allow embedding from your WP site (adjust WP_ORIGIN as needed)
-    resp.headers["Content-Security-Policy"] = f"frame-ancestors 'self' {WP_ORIGIN}"
-    resp.headers["X-Frame-Options"] = f"ALLOW-FROM {WP_ORIGIN}"
+    # Do NOT send X-Frame-Options (ALLOW-FROM is deprecated/ignored by modern browsers)
+    resp.headers.pop("X-Frame-Options", None)
+    # The header that actually controls iframe embedding:
+    resp.headers["Content-Security-Policy"] = f"frame-ancestors {_csp_frame_ancestors_value()};"
+    # Optional nicety
+    resp.headers.setdefault("Referrer-Policy", "no-referrer-when-downgrade")
     return resp
 
 @server.get("/health")
@@ -169,7 +189,12 @@ def make_stacked_area(df: pd.DataFrame, include_intraday, visible_total: pd.Seri
     return fig
 
 # -------------------- Dash app --------------------
-app = Dash(__name__, server=server, title="BESS OMIE Index")
+app = Dash(
+    __name__,
+    server=server,
+    title="BESS OMIE Index",
+    meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
+)
 
 # Preload for sensible date picker defaults
 _initial_rows = _load_json()
