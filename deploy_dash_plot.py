@@ -285,7 +285,7 @@ app.layout = html.Div(
             ],
         ),
 
-        dcc.Graph(id="stacked-graph", config={"displaylogo": False}),
+        dcc.Graph(id="stacked-graph", config={"displaylogo": False}, style={"width": "100%"}),
         dcc.Interval(id="refresh", interval=REFRESH_MS, n_intervals=0),
         # removed data-status line
     ],
