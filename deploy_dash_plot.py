@@ -183,7 +183,7 @@ def make_stacked_area(df: pd.DataFrame, include_intraday, visible_total: pd.Seri
         hovermode="x unified",
         margin=dict(l=40, r=20, t=60, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
-        font=dict(family="Arial, sans-serif")
+        font=dict(family="ui-sans-serif")
     )
     fig.update_yaxes(tickprefix="€")
     return fig
@@ -209,17 +209,15 @@ else:
     default_start = max(min_day, max_day - timedelta(days=365))
 
 app.layout = html.Div(
-    style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem", "fontFamily": "Arial, sans-serif"},
+    style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem", "fontFamily": "ui-sans-serif"},
     children=[
-        html.H2("OMIE Perfect Foresight BESS Revenues - 2h 1 cycle per day"),
-
         # Top controls: only the intraday layer toggles
         html.Div(
             style={"display": "flex", "gap": "1rem", "flexWrap": "wrap", "alignItems": "center"},
             children=[
                 html.Div(
                     [
-                        html.Label("Show intraday layers:", style={"fontWeight": 600}),
+                        html.Label("Show Intraday Layers:", style={"fontWeight": 600}),
                         dcc.Checklist(
                             id="layers",
                             options=[{"label": s.replace("_", " ").replace("Delta", "Δ"), "value": s} for s in INTRADAY_SERIES],
@@ -312,7 +310,7 @@ def update_chart(selected_layers, start_date, end_date, _n):
             xaxis_title="Date",
             yaxis_title="€",
             margin=dict(l=40, r=20, t=60, b=40),
-            font=dict(family="Arial, sans-serif"),
+            font=dict(family="ui-sans-serif"),
         )
         return empty, "€0.00", "€0.00", "€0.00"
 
@@ -344,7 +342,7 @@ def update_chart(selected_layers, start_date, end_date, _n):
         include_intraday=(selected_layers or []),
         visible_total=visible_total_range,
     )
-    fig.update_layout(font=dict(family="Arial, sans-serif"))
+    fig.update_layout(font=dict(family="ui-sans-serif"))
 
     return fig, _fmt_euro(ytd_total), _fmt_euro(avg_daily), _fmt_euro(expected_yearly)
 
