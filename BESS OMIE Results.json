@@ -2230,5 +2230,13 @@
     "IDA2_Delta": 4.57,
     "IDA3_Delta": 0.0,
     "IDC_Delta": 24.38
+  },
+  {
+    "date": "2025-10-07",
+    "DA_Earnings": 230.19,
+    "IDA1_Delta": 0.42,
+    "IDA2_Delta": 3.14,
+    "IDA3_Delta": 0.86,
+    "IDC_Delta": 0.59
   }
 ]
