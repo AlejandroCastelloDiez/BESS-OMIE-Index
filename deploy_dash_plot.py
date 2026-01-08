@@ -178,7 +178,7 @@ def make_stacked_area(df: pd.DataFrame, include_intraday, visible_total: pd.Seri
 
     fig.update_layout(
         title="",
-        xaxis_title="",  # removed redundant x-axis title
+        xaxis_title="",  # removed redundant "Date"
         yaxis_title="€/MW",
         hovermode="x unified",
         margin=dict(l=40, r=20, t=60, b=40),
@@ -214,6 +214,48 @@ else:
     default_end = max_day
     default_start = max(min_day, max_day - timedelta(days=365))
 
+_DATEPICKER_CSS = """
+  /* --- DatePickerRange (react-dates) --- */
+  .DateRangePicker, .DateRangePickerInput {
+    font-family: Roboto, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans" !important;
+  }
+  .DateRangePickerInput {
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 8px 10px !important;
+    background: #fff !important;
+  }
+  .DateInput {
+    width: 120px !important;
+    background: transparent !important;
+  }
+  .DateInput_input {
+    font-size: 14px !important;
+    padding: 6px 8px !important;
+    border-radius: 10px !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  .DateRangePickerInput_arrow {
+    color: #6b7280 !important;
+  }
+  .DateRangePickerInput_clearDates {
+    margin: 0 4px !important;
+  }
+  .DayPickerKeyboardShortcuts_show {
+    display: none !important; /* removes the little keyboard shortcuts badge */
+  }
+  /* Make the popup feel lighter */
+  .DayPicker_transitionContainer, .DayPicker {
+    border-radius: 14px !important;
+  }
+  .CalendarMonth_table {
+    border-collapse: separate !important;
+    border-spacing: 0 4px !important;
+  }
+"""
+
 app.layout = html.Div(
     style={
         "maxWidth": "1200px",
@@ -222,48 +264,10 @@ app.layout = html.Div(
         "fontFamily": '"Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans"',
     },
     children=[
-        # Global CSS (DatePickerRange styling)
-        html.Style("""
-          /* --- DatePickerRange (react-dates) --- */
-          .DateRangePicker, .DateRangePickerInput {
-            font-family: Roboto, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans" !important;
-          }
-          .DateRangePickerInput {
-            border: 1px solid #e5e7eb !important;
-            border-radius: 12px !important;
-            padding: 8px 10px !important;
-            background: #fff !important;
-          }
-          .DateInput {
-            width: 120px !important;
-            background: transparent !important;
-          }
-          .DateInput_input {
-            font-size: 14px !important;
-            padding: 6px 8px !important;
-            border-radius: 10px !important;
-            border: 0 !important;
-            box-shadow: none !important;
-            background: transparent !important;
-          }
-          .DateRangePickerInput_arrow {
-            color: #6b7280 !important;
-          }
-          .DateRangePickerInput_clearDates {
-            margin: 0 4px !important;
-          }
-          .DayPickerKeyboardShortcuts_show {
-            display: none !important; /* removes the little keyboard shortcuts badge */
-          }
-          /* Make the popup feel lighter */
-          .DayPicker_transitionContainer, .DayPicker {
-            border-radius: 14px !important;
-          }
-          .CalendarMonth_table {
-            border-collapse: separate !important;
-            border-spacing: 0 4px !important;
-          }
-        """),
+        # Global CSS injection (works on older Dash too)
+        html.Div(
+            dangerouslySetInnerHTML={"__html": f"<style>{_DATEPICKER_CSS}</style>"}
+        ),
 
         # Top controls: only the intraday layer toggles
         html.Div(
@@ -361,7 +365,7 @@ def update_chart(selected_layers, start_date, end_date, _n):
         empty = go.Figure()
         empty.update_layout(
             title="No data available",
-            xaxis_title="",  # removed redundant x-axis title
+            xaxis_title="",
             yaxis_title="€",
             margin=dict(l=40, r=20, t=60, b=40),
             font=dict(family='"Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans"'),
