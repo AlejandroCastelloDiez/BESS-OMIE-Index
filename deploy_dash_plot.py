@@ -178,13 +178,16 @@ def make_stacked_area(df: pd.DataFrame, include_intraday, visible_total: pd.Seri
 
     fig.update_layout(
         title="",
-        xaxis_title="Date",
+        xaxis_title="",  # removed redundant x-axis title
         yaxis_title="€/MW",
         hovermode="x unified",
         margin=dict(l=40, r=20, t=60, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
-        font=dict(family="ui-sans-serif")
+        font=dict(family='"Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans"'),
+        paper_bgcolor="rgba(0,0,0,0)",  # transparent outer bg
+        plot_bgcolor="rgba(0,0,0,0)",   # transparent plot bg
     )
+    fig.update_xaxes(title_text="")
     fig.update_yaxes(tickprefix="€")
     return fig
 
@@ -194,6 +197,9 @@ app = Dash(
     server=server,
     title="BESS OMIE Index",
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
+    external_stylesheets=[
+        "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+    ],
 )
 
 # Preload for sensible date picker defaults
@@ -209,8 +215,56 @@ else:
     default_start = max(min_day, max_day - timedelta(days=365))
 
 app.layout = html.Div(
-    style={"maxWidth": "1200px", "margin": "0 auto", "padding": "1rem", "fontFamily": "ui-sans-serif"},
+    style={
+        "maxWidth": "1200px",
+        "margin": "0 auto",
+        "padding": "1rem",
+        "fontFamily": '"Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans"',
+    },
     children=[
+        # Global CSS (DatePickerRange styling)
+        html.Style("""
+          /* --- DatePickerRange (react-dates) --- */
+          .DateRangePicker, .DateRangePickerInput {
+            font-family: Roboto, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans" !important;
+          }
+          .DateRangePickerInput {
+            border: 1px solid #e5e7eb !important;
+            border-radius: 12px !important;
+            padding: 8px 10px !important;
+            background: #fff !important;
+          }
+          .DateInput {
+            width: 120px !important;
+            background: transparent !important;
+          }
+          .DateInput_input {
+            font-size: 14px !important;
+            padding: 6px 8px !important;
+            border-radius: 10px !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            background: transparent !important;
+          }
+          .DateRangePickerInput_arrow {
+            color: #6b7280 !important;
+          }
+          .DateRangePickerInput_clearDates {
+            margin: 0 4px !important;
+          }
+          .DayPickerKeyboardShortcuts_show {
+            display: none !important; /* removes the little keyboard shortcuts badge */
+          }
+          /* Make the popup feel lighter */
+          .DayPicker_transitionContainer, .DayPicker {
+            border-radius: 14px !important;
+          }
+          .CalendarMonth_table {
+            border-collapse: separate !important;
+            border-spacing: 0 4px !important;
+          }
+        """),
+
         # Top controls: only the intraday layer toggles
         html.Div(
             style={"display": "flex", "gap": "1rem", "flexWrap": "wrap", "alignItems": "center"},
@@ -307,10 +361,12 @@ def update_chart(selected_layers, start_date, end_date, _n):
         empty = go.Figure()
         empty.update_layout(
             title="No data available",
-            xaxis_title="Date",
+            xaxis_title="",  # removed redundant x-axis title
             yaxis_title="€",
             margin=dict(l=40, r=20, t=60, b=40),
-            font=dict(family="ui-sans-serif"),
+            font=dict(family='"Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans"'),
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
         )
         return empty, "€0.00", "€0.00", "€0.00"
 
@@ -342,12 +398,10 @@ def update_chart(selected_layers, start_date, end_date, _n):
         include_intraday=(selected_layers or []),
         visible_total=visible_total_range,
     )
-    fig.update_layout(font=dict(family="ui-sans-serif"))
+    fig.update_layout(font=dict(family='"Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans"'))
 
     return fig, _fmt_euro(ytd_total), _fmt_euro(avg_daily), _fmt_euro(expected_yearly)
 
 # Local debugging
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port=int(os.environ.get("PORT", "8050")), debug=True)
-
-
