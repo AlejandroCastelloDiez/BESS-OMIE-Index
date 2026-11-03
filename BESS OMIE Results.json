@@ -5278,5 +5278,13 @@
     "IDA2_Delta": 9.5,
     "IDA3_Delta": 13.11,
     "IDC_Delta": 0.0
+  },
+  {
+    "date": "2026-11-02",
+    "DA_Earnings": 555.73,
+    "IDA1_Delta": 7.88,
+    "IDA2_Delta": 10.62,
+    "IDA3_Delta": 1.99,
+    "IDC_Delta": 0.0
   }
 ]
